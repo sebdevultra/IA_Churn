@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: churn_monitor_app
+    restart: always
+    ports:
+      - "8000:8000"
+    environment:
+      - ENVIRONMENT=production
+      - DATABASE_URL=sqlite:///./data/churn_monitor.db
+      - AI_PROVIDER=deterministic_rule
+      - SCHEDULER_ENABLED=true
+      - SCHEDULER_INTERVAL_MINUTES=5
+      - AUTO_INGEST_SAMPLE_DATA=true
+    volumes:
+      - ./data:/app/data
+

@@ -1,0 +1,296 @@
+/* ==========================================================================
+   CHURN SENTINEL AI - Horizon UI (Horizon Next) Theme & Design Tokens
+   Reference: https://themewagon.github.io/horizon-next/admin/default
+   Palette: Horizon Purple (#4318FF), Midnight Navy (#0B1437 / #111C44), Soft Slate (#F4F7FE)
+   ========================================================================== */
+
+:root {
+  /* JDS Primary & Brand Colors */
+  --hz-primary: #0070F3;
+  --hz-primary-hover: #0051A8;
+  --hz-primary-light: #3B82F6;
+  --hz-primary-subtle: rgba(0, 112, 243, 0.12);
+  --hz-primary-rgb: 0, 112, 243;
+
+  /* JDS Dark Mode Colors (Deep Navy) */
+  --hz-bg-dark: #0A1128;
+  --hz-card-dark: #121F40;
+  --hz-card-hover: #1C2D5A;
+  --hz-sidebar-dark: #121F40;
+  --hz-header-dark: rgba(18, 31, 64, 0.85);
+  --hz-border-dark: rgba(255, 255, 255, 0.08);
+  --hz-input-dark: #0A1128;
+
+  /* Horizon Light Mode Colors */
+  --hz-bg-light: #F4F7FE;
+  --hz-card-light: #FFFFFF;
+  --hz-card-hover-light: #F8FAFC;
+  --hz-sidebar-light: #FFFFFF;
+  --hz-header-light: rgba(255, 255, 255, 0.85);
+  --hz-border-light: rgba(112, 144, 176, 0.15);
+  --hz-input-light: #F4F7FE;
+
+  /* Current Active Theme Variables (Dark by Default) */
+  --hz-bg: var(--hz-bg-dark);
+  --hz-card: var(--hz-card-dark);
+  --hz-card-hover-bg: var(--hz-card-hover);
+  --hz-sidebar: var(--hz-sidebar-dark);
+  --hz-header: var(--hz-header-dark);
+  --hz-border: var(--hz-border-dark);
+  --hz-input: var(--hz-input-dark);
+
+  /* Typography Colors */
+  --hz-text-title: #FFFFFF;
+  --hz-text-primary: #F4F7FE;
+  --hz-text-secondary: #A3AED0;
+  --hz-text-muted: #7090B0;
+
+  /* Horizon Status Palette */
+  --hz-success: #05CD99;
+  --hz-success-subtle: rgba(5, 205, 153, 0.15);
+  --hz-warning: #FFB547;
+  --hz-warning-subtle: rgba(255, 181, 71, 0.15);
+  --hz-orange: #FF763C;
+  --hz-orange-subtle: rgba(255, 118, 60, 0.15);
+  --hz-danger: #EE5D50;
+  --hz-danger-subtle: rgba(238, 93, 80, 0.2);
+  --hz-info: #39B8FF;
+  --hz-info-subtle: rgba(57, 184, 255, 0.15);
+
+  /* Layout Spacing & Radius */
+  --hz-sidebar-width: 290px;
+  --hz-header-height: 80px;
+  --hz-card-radius: 20px;
+  --hz-pill-radius: 9999px;
+
+  --hz-transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --hz-shadow-sm: 0px 10px 30px rgba(0, 0, 0, 0.25);
+  --hz-shadow: 0px 18px 40px rgba(0, 0, 0, 0.35);
+  --hz-shadow-glow: 0px 10px 25px rgba(67, 24, 255, 0.4);
+}
+
+/* Light Theme Switch Override */
+[data-theme="light"] {
+  --hz-bg: var(--hz-bg-light);
+  --hz-card: var(--hz-card-light);
+  --hz-card-hover-bg: var(--hz-card-hover-light);
+  --hz-sidebar: var(--hz-sidebar-light);
+  --hz-header: var(--hz-header-light);
+  --hz-border: var(--hz-border-light);
+  --hz-input: var(--hz-input-light);
+
+  --hz-text-title: #2B3674;
+  --hz-text-primary: #2B3674;
+  --hz-text-secondary: #7090B0;
+  --hz-text-muted: #A3AED0;
+
+  --hz-shadow-sm: 0px 10px 30px rgba(112, 144, 176, 0.08);
+  --hz-shadow: 0px 18px 40px rgba(112, 144, 176, 0.12);
+}
+
+/* Base Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'DM Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--hz-bg);
+  color: var(--hz-text-primary);
+  min-height: 100vh;
+  line-height: 1.5;
+  transition: background-color var(--hz-transition), color var(--hz-transition);
+}
+
+/* Horizon Layout Wrapper */
+.horizon-wrapper {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Left Sidebar Navigation */
+.horizon-sidebar {
+  width: var(--hz-sidebar-width);
+  background-color: var(--hz-sidebar);
+  border-right: 1px solid var(--hz-border);
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 1000;
+  padding: 32px 16px;
+  transition: transform var(--hz-transition), background-color var(--hz-transition);
+}
+
+.sidebar-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 16px 32px;
+  border-bottom: 1px solid var(--hz-border);
+  margin-bottom: 24px;
+}
+
+.logo-brand-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--hz-text-title);
+  letter-spacing: -0.03em;
+}
+
+.logo-brand-title span {
+  color: var(--hz-primary);
+}
+
+.sidebar-nav-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.sidebar-nav-item {
+  position: relative;
+}
+
+.sidebar-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 18px;
+  color: var(--hz-text-muted);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border-radius: 14px;
+  transition: all var(--hz-transition);
+}
+
+.sidebar-nav-link:hover {
+  color: var(--hz-text-title);
+  background-color: var(--hz-card-hover-bg);
+}
+
+.sidebar-nav-link.active {
+  color: var(--hz-text-title);
+  font-weight: 700;
+  background-color: var(--hz-primary-subtle);
+}
+
+.sidebar-nav-link.active .nav-icon {
+  color: var(--hz-primary);
+}
+
+/* Horizon Active Right Indicator Bar */
+.sidebar-nav-item.active::after {
+  content: "";
+  position: absolute;
+  right: -16px;
+  top: 10px;
+  bottom: 10px;
+  width: 4px;
+  background-color: var(--hz-primary);
+  border-radius: 4px 0 0 4px;
+}
+
+/* Sidebar Footer User Card */
+.sidebar-user-card {
+  background-color: var(--hz-card-hover-bg);
+  border: 1px solid var(--hz-border);
+  border-radius: 16px;
+  padding: 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.user-avatar-hz {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--hz-primary), var(--hz-primary-light));
+  color: #ffffff;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 12px rgba(67, 24, 255, 0.3);
+}
+
+/* Horizon Main Content Container */
+.horizon-main {
+  flex: 1;
+  margin-left: var(--hz-sidebar-width);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 24px 32px 40px;
+}
+
+/* Floating Horizon Top Header Navbar Pill */
+.horizon-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.navbar-breadcrumbs {
+  font-size: 0.8rem;
+  color: var(--hz-text-muted);
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.navbar-page-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--hz-text-title);
+  letter-spacing: -0.02em;
+}
+
+/* Floating Right Action Panel */
+.navbar-action-panel {
+  background-color: var(--hz-card);
+  border: 1px solid var(--hz-border);
+  box-shadow: var(--hz-shadow-sm);
+  border-radius: var(--hz-pill-radius);
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  backdrop-filter: blur(12px);
+}
+
+/* Horizon Cards */
+.card-horizon {
+  background-color: var(--hz-card);
+  border: 1px solid var(--hz-border);
+  border-radius: var(--hz-card-radius);
+  box-shadow: var(--hz-shadow);
+  padding: 24px;
+  transition: transform var(--hz-transition), box-shadow var(--hz-transition);
+}
+
+.card-horizon:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 22px 45px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 992px) {
+  .horizon-sidebar {
+    transform: translateX(-100%);
+  }
+  .horizon-main {
+    margin-left: 0;
+    padding: 16px;
+  }
+}

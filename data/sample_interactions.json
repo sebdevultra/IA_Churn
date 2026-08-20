@@ -1,0 +1,68 @@
+[
+  {
+    "customer_external_id": "CUST-1001",
+    "source_type": "support_ticket",
+    "content": "Llevamos 3 días con la API caída en producción y nadie en soporte nos da una solución. Es totalmente inaceptable para una cuenta Enterprise. Si esto no se resuelve hoy mismo, vamos a cancelar el contrato de inmediato y buscar otra alternativa.",
+    "external_reference_id": "TICK-901"
+  },
+  {
+    "customer_external_id": "CUST-1002",
+    "source_type": "review",
+    "content": "Excelente servicio, la plataforma es muy intuitiva y rápida. El equipo de soporte nos atendió de maravilla.",
+    "external_reference_id": "REV-301"
+  },
+  {
+    "customer_external_id": "CUST-1003",
+    "source_type": "chat",
+    "content": "Estoy harto de esperar días para recibir una respuesta de soporte. Cada actualización rompe la sincronización y la verdad es una vergüenza.",
+    "external_reference_id": "CHAT-402"
+  },
+  {
+    "customer_external_id": "CUST-1004",
+    "source_type": "survey",
+    "content": "Bueno... la herramienta funciona para lo básico, aunque esperaba algo diferente en la interfaz de reportes.",
+    "external_reference_id": "NPS-810"
+  },
+  {
+    "customer_external_id": "CUST-1005",
+    "source_type": "support_ticket",
+    "content": "Nos aplicaron un cobro indebido en la última factura de fin de mes y el módulo de pagos arrojó error 500.",
+    "external_reference_id": "TICK-902"
+  },
+  {
+    "customer_external_id": "CUST-1001",
+    "source_type": "chat",
+    "content": "Reiteramos nuestra disconformidad. La lentitud en responder nuestros tickets críticos nos está costando clientes.",
+    "external_reference_id": "CHAT-403"
+  },
+  {
+    "customer_external_id": "CUST-1002",
+    "source_type": "survey",
+    "content": "Me encanta la nueva actualización y los dashboards analíticos. Gran trabajo.",
+    "external_reference_id": "NPS-811"
+  },
+  {
+    "customer_external_id": "CUST-1003",
+    "source_type": "support_ticket",
+    "content": "Exigimos hablar con un gerente de cuenta. La falta de fiabilidad del producto nos obligará a cancelar la suscripción anual.",
+    "external_reference_id": "TICK-903"
+  },
+  {
+    "customer_external_id": "CUST-1006",
+    "name": "Logistics Express SA",
+    "email": "ops@logisticsexpress.com",
+    "tier": "enterprise",
+    "source_type": "review",
+    "content": "Pésimo servicio postventa. Tardan más de 48 horas en contestar cualquier consulta técnica.",
+    "external_reference_id": "REV-302"
+  },
+  {
+    "customer_external_id": "CUST-1007",
+    "name": "Retail Digital Group",
+    "email": "contact@retaildigital.io",
+    "tier": "pro",
+    "source_type": "chat",
+    "content": "La plataforma está súper rápida hoy, resolvieron nuestras dudas en menos de 5 minutos. Muy satisfechos.",
+    "external_reference_id": "CHAT-404"
+  }
+]
