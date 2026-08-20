@@ -211,7 +211,7 @@ class App {
             tierSelect.value = 'Enterprise';
             break;
           case 'support':
-            feedbackInput.value = 'Llevamos 3 días esperando respuesta al ticket #4092. El sistema sigue fallenado y la atención ha sido decepcionante.';
+            feedbackInput.value = 'Llevamos 3 días esperando respuesta al ticket #4092. El sistema sigue fallando y la atención ha sido decepcionante.';
             tierSelect.value = 'Pro';
             break;
           case 'churn':
@@ -271,6 +271,47 @@ class App {
         } finally {
           simSubmitBtn.disabled = false;
           simSubmitBtn.innerHTML = '<i class="fa-solid fa-bolt"></i> Analizar en Vivo';
+        }
+      });
+    }
+
+    // 7. Hatsune Miku Sound Trigger (Carga archivo local: assets/miku-sound.mp3)
+    const mikuBtn = document.getElementById('chibi-miku-btn');
+
+    if (mikuBtn) {
+      mikuBtn.addEventListener('click', () => {
+        const mikuImg = document.getElementById('miku-gif-img');
+        if (mikuImg) {
+          mikuImg.style.transform = 'scale(1.25) rotate(8deg)';
+          setTimeout(() => { mikuImg.style.transform = 'scale(1)'; }, 350);
+        }
+
+        // Try playing via dynamic Audio object
+        try {
+          const snd = new Audio('assets/miku-sound.mp3');
+          snd.volume = 1.0;
+          const promise = snd.play();
+
+          if (promise !== undefined) {
+            promise.then(() => {
+              uiController.showToast('♪ Tole Tole Kawaii~!', 'Hatsune Miku dice: ¡Hola JDS Energy & Mining!', 'info');
+            }).catch(err => {
+              console.warn('[MikuAudio Intent 1 Error]', err);
+              // Fallback to HTML audio element
+              const htmlAudio = document.getElementById('miku-audio-player');
+              if (htmlAudio) {
+                htmlAudio.currentTime = 0;
+                htmlAudio.play().then(() => {
+                  uiController.showToast('♪ Tole Tole Kawaii~!', 'Hatsune Miku dice: ¡Hola JDS Energy & Mining!', 'info');
+                }).catch(e2 => {
+                  console.error('[MikuAudio Intent 2 Error]', e2);
+                  uiController.showToast('Error de Audio', 'Haga clic en la página primero para permitir reproducción.', 'warning');
+                });
+              }
+            });
+          }
+        } catch (e) {
+          console.error('[MikuAudio Exception]', e);
         }
       });
     }

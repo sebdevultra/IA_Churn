@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="JDS Sentinel AI Dashboard para Monitor de Sentimiento y Alertas de Riesgo de Abandono.">
-  <title>JDS Sentinel AI | Main Dashboard</title>
+  <title>JDS AI Bros | Main Dashboard</title>
 
   <!-- Google Fonts DM Sans & Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -66,6 +66,18 @@
           </a>
         </li>
       </ul>
+
+      <!-- Chibi Miku Animated GIF Widget & Audio Element -->
+      <div id="chibi-miku-btn" class="sidebar-miku-card" style="margin: 20px 0 16px; padding: 12px; background: rgba(0, 112, 243, 0.08); border: 1px solid var(--hz-border); border-radius: 16px; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; cursor: pointer; user-select: none;" title="¡Haz clic en Miku para reproducir el audio!">
+        <img id="miku-gif-img" src="assets/chibi-miku.gif" alt="Chibi Miku Assistant" style="max-width: 140px; max-height: 140px; object-fit: contain; filter: drop-shadow(0 4px 12px rgba(0, 112, 243, 0.35)); border-radius: 12px; transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);">
+        <span style="font-size: 0.75rem; font-weight: 700; color: var(--hz-primary-light); letter-spacing: 0.05em; text-transform: uppercase; display: flex; align-items: center; gap: 4px;">
+          <i class="ti ti-volume"></i> Click Me!
+        </span>
+        <audio id="miku-audio-player" preload="auto">
+          <source src="assets/miku-sound.mp3" type="audio/mpeg">
+          <source src="assets/miku-sound.mp3" type="audio/mp3">
+        </audio>
+      </div>
 
       <div class="sidebar-user-card">
         <div class="user-avatar-hz">CSM</div>
