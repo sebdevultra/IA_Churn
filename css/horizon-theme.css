@@ -5,21 +5,21 @@
    ========================================================================== */
 
 :root {
-  /* Horizon Primary & Brand Colors */
-  --hz-primary: #4318FF;
-  --hz-primary-hover: #3311DB;
-  --hz-primary-light: #7551FF;
-  --hz-primary-subtle: rgba(67, 24, 255, 0.12);
-  --hz-primary-rgb: 67, 24, 255;
+  /* JDS Primary & Brand Colors */
+  --hz-primary: #0070F3;
+  --hz-primary-hover: #0051A8;
+  --hz-primary-light: #3B82F6;
+  --hz-primary-subtle: rgba(0, 112, 243, 0.12);
+  --hz-primary-rgb: 0, 112, 243;
 
-  /* Horizon Dark Mode Colors (Midnight Navy) */
-  --hz-bg-dark: #0B1437;
-  --hz-card-dark: #111C44;
-  --hz-card-hover: #1B254B;
-  --hz-sidebar-dark: #111C44;
-  --hz-header-dark: rgba(17, 28, 68, 0.85);
+  /* JDS Dark Mode Colors (Deep Navy) */
+  --hz-bg-dark: #0A1128;
+  --hz-card-dark: #121F40;
+  --hz-card-hover: #1C2D5A;
+  --hz-sidebar-dark: #121F40;
+  --hz-header-dark: rgba(18, 31, 64, 0.85);
   --hz-border-dark: rgba(255, 255, 255, 0.08);
-  --hz-input-dark: #0B1437;
+  --hz-input-dark: #0A1128;
 
   /* Horizon Light Mode Colors */
   --hz-bg-light: #F4F7FE;

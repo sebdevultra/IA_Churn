@@ -19,7 +19,7 @@ class App {
    * Application Entry Point
    */
   async init() {
-    console.log('[App] Initializing Churn Sentinel AI Dashboard...');
+    console.log('[App] Initializing JDS Sentinel AI Dashboard...');
 
     // 1. Initialize Chart.js canvases
     const trendCanvas = document.getElementById('sentimentTrendChart');
@@ -36,7 +36,7 @@ class App {
     // 4. Start Smart Periodic Polling
     this.startPolling();
 
-    uiController.showToast('Sistema Listo', 'Dashboard de Churn Sentinel AI sincronizado.', 'success');
+    uiController.showToast('Sistema Listo', 'Dashboard de JDS Sentinel AI sincronizado.', 'success');
   }
 
   /**
