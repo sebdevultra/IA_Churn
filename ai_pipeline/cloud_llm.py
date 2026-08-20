@@ -8,6 +8,13 @@ import json
 import os
 import time
 from typing import Optional, Dict, Any
+
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    pass
+
 from .schemas import (
     AISemanticAnalysisResult,
     SentimentType,
@@ -15,6 +22,7 @@ from .schemas import (
     FrictionCategory,
 )
 from .prompt_templates import SYSTEM_PROMPT_SEMANTIC_ANALYZER, build_analysis_prompt
+
 
 
 class CloudGeminiAnalyzer:

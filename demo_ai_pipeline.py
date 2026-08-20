@@ -10,12 +10,19 @@ import os
 import sys
 import time
 
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    pass
+
 # Configurar encoding UTF-8 para consola Windows
 if sys.platform == "win32":
     try:
         sys.stdout.reconfigure(encoding="utf-8")
     except Exception:
         pass
+
 
 from ai_pipeline.schemas import (
     InteractionPayload,
