@@ -23,6 +23,18 @@ ENV/
 # Database files
 *.sqlite3
 *.db
+*.db-shm
+*.db-wal
+churn_monitor.db*
+
+# Compressed Archives & Large Datasets
+*.rar
+*.zip
+data/dataset_1m_interactions.csv
+
+# Backend local environments
+backend/.env
+backend/.env.local
 
 # Temporary / Scratch
 tmp/

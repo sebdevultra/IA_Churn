@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="JDS Sentinel AI Dashboard para Monitor de Sentimiento y Alertas de Riesgo de Abandono.">
+  <title>JDS AI Bros | Main Dashboard</title>
+
+  <!-- Google Fonts DM Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tabler Icons CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+  
+  <!-- Font Awesome 6 Icons CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Horizon UI Theme Stylesheets -->
+  <link rel="stylesheet" href="css/horizon-theme.css">
+  <link rel="stylesheet" href="css/components.css">
+
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <div class="horizon-wrapper">
+
+    <!-- HORIZON LEFT SIDEBAR NAVIGATION -->
+    <aside class="horizon-sidebar" id="horizon-sidebar">
+      <div class="sidebar-logo">
+        <img src="assets/jds-logo.svg" alt="JDS Energy &amp; Mining" style="width: 44px; height: 44px; object-fit: contain;">
+        <div class="logo-brand-title" style="font-size: 1.05rem; line-height: 1.2;">
+          JDS <span>IA Bros</span>
+        </div>
+      </div>
+
+      <ul class="sidebar-nav-list">
+        <li class="sidebar-nav-item active">
+          <a href="#dashboard" class="sidebar-nav-link active">
+            <i class="ti ti-smart-home nav-icon"></i>
+            <span>Main Dashboard</span>
+          </a>
+        </li>
+        
+        <li class="sidebar-nav-item">
+          <a href="#analytics" class="sidebar-nav-link">
+            <i class="ti ti-chart-pie nav-icon"></i>
+            <span>Analítica Sentimiento</span>
+          </a>
+        </li>
+
+        <li class="sidebar-nav-item">
+          <a href="#console" class="sidebar-nav-link">
+            <i class="ti ti-alert-circle nav-icon"></i>
+            <span>Consola de Incidentes</span>
+          </a>
+        </li>
+
+        <li class="sidebar-nav-item">
+          <a href="#csv-upload" class="sidebar-nav-link">
+            <i class="ti ti-file-upload nav-icon"></i>
+            <span>Carga Masiva CSV</span>
+          </a>
+        </li>
+      </ul>
+
+      <!-- Chibi Miku Animated GIF Widget & Audio Element -->
+      <div id="chibi-miku-btn" class="sidebar-miku-card" style="margin: 20px 0 16px; padding: 12px; background: rgba(0, 112, 243, 0.08); border: 1px solid var(--hz-border); border-radius: 16px; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; cursor: pointer; user-select: none;" title="¡Haz clic en Miku para reproducir el audio!">
+        <img id="miku-gif-img" src="assets/chibi-miku.gif" alt="Chibi Miku Assistant" style="max-width: 140px; max-height: 140px; object-fit: contain; filter: drop-shadow(0 4px 12px rgba(0, 112, 243, 0.35)); border-radius: 12px; transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);">
+        <span style="font-size: 0.75rem; font-weight: 700; color: var(--hz-primary-light); letter-spacing: 0.05em; text-transform: uppercase; display: flex; align-items: center; gap: 4px;">
+          <i class="ti ti-volume"></i> Click Me!
+        </span>
+        <audio id="miku-audio-player" preload="auto">
+          <source src="/assets/miku-sound.mp3" type="audio/mpeg">
+          <source src="assets/miku-sound.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+
+      <div class="sidebar-user-card">
+        <div class="user-avatar-hz">CSM</div>
+        <div style="flex: 1; overflow: hidden;">
+          <div style="font-size: 0.85rem; font-weight: 700; color: var(--hz-text-title); text-overflow: ellipsis; white-space: nowrap; overflow: hidden;">Operations Lead</div>
+          <div style="font-size: 0.75rem; color: var(--hz-text-muted);">Risk Engineer</div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- HORIZON MAIN CONTENT AREA -->
+    <main class="horizon-main">
+
+      <!-- FLOATING TOP NAVBAR PILL -->
+      <header class="horizon-navbar">
+        <div>
+          <div class="navbar-breadcrumbs">JDS Energy &amp; Mining / Main Dashboard</div>
+          <h1 class="navbar-page-title">JDS Sentinel &bull; Monitor de Sentimiento</h1>
+        </div>
+
+        <!-- Floating Right Action Panel -->
+        <div class="navbar-action-panel">
+          <!-- Search Box -->
+          <div class="search-box-container">
+            <i class="ti ti-search"></i>
+            <input type="text" id="navbar-search" placeholder="Search...">
+          </div>
+
+          <!-- Alertas Críticas Badge -->
+          <div id="header-critical-badge" class="critical-alerts-badge">
+            <i class="ti ti-alert-triangle"></i>
+            <span><strong id="header-critical-count">0</strong> Críticas</span>
+          </div>
+
+          <!-- Auto-refresh Toggle -->
+          <div class="horizon-pill">
+            <i class="ti ti-refresh"></i>
+            <label class="switch" title="Activar/Desactivar Sondeo Periódico" style="position: relative; display: inline-block; width: 34px; height: 18px;">
+              <input type="checkbox" id="auto-refresh-toggle" checked style="opacity: 0; width: 0; height: 0;">
+              <span class="slider" style="position: absolute; cursor: pointer; top:0; left:0; right:0; bottom:0; background-color: #334155; transition: .3s; border-radius: 20px;"></span>
+            </label>
+          </div>
+
+          <!-- Connection Status -->
+          <div id="header-connection-status" class="horizon-pill connection-status online">
+            <span class="status-dot"></span>
+            <span id="connection-status-text">Online</span>
+          </div>
+
+          <!-- Theme Switcher -->
+          <button id="theme-toggle" title="Alternar Modo Claro/Oscuro Horizon" style="width: 36px; height: 36px; border-radius: 50%; background-color: var(--hz-bg); border: 1px solid var(--hz-border); color: var(--hz-text-title); cursor: pointer; display: flex; align-items: center; justify-content: center;">
+            <i class="ti ti-sun icon-sun" style="font-size: 1.1rem;"></i>
+            <i class="ti ti-moon icon-moon" style="font-size: 1.1rem; display: none;"></i>
+          </button>
+        </div>
+      </header>
+
+      <!-- MAIN DASHBOARD CONTENT -->
+      <div style="display: flex; flex-direction: column; gap: 24px;">
+
+        <!-- 1. KPIS EJECUTIVOS (HORIZON STAT WIDGETS) -->
+        <section style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px;">
+          
+          <!-- KPI 1: Total Interacciones -->
+          <div class="card-horizon" style="display: flex; align-items: center; gap: 16px;">
+            <div style="width: 56px; height: 56px; border-radius: 50%; background-color: var(--hz-primary-subtle); color: var(--hz-primary); display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
+              <i class="ti ti-messages"></i>
+            </div>
+            <div>
+              <span style="font-size: 0.8rem; font-weight: 600; color: var(--hz-text-muted); text-transform: uppercase; letter-spacing: 0.05em;">
+                Total Interacciones
+              </span>
+              <div style="font-size: 1.75rem; font-weight: 800; color: var(--hz-text-title);" id="kpi-total-interactions">0</div>
+              <div style="font-size: 0.75rem; color: var(--hz-success); font-weight: 600; display: flex; align-items: center; gap: 4px;">
+                <i class="ti ti-circle-check"></i> Procesadas por AI Engine
+              </div>
+            </div>
+          </div>
+
+          <!-- KPI 2: Salud de Sentimiento -->
+          <div class="card-horizon">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+              <div>
+                <span style="font-size: 0.8rem; font-weight: 600; color: var(--hz-text-muted); text-transform: uppercase; letter-spacing: 0.05em;">
+                  Índice de Salud
+                </span>
+                <div style="font-size: 1.4rem; font-weight: 800; color: var(--hz-text-title);" id="kpi-sentiment-health">0% Positivo</div>
+              </div>
+              <div style="width: 48px; height: 48px; border-radius: 50%; background-color: var(--hz-info-subtle); color: var(--hz-info); display: flex; align-items: center; justify-content: center; font-size: 1.3rem;">
+                <i class="ti ti-activity-heartbeat"></i>
+              </div>
+            </div>
+            <div class="tri-color-bar">
+              <div id="bar-positive" class="bar-segment bar-positive" style="width: 50%;"></div>
+              <div id="bar-neutral" class="bar-segment bar-neutral" style="width: 30%;"></div>
+              <div id="bar-negative" class="bar-segment bar-negative" style="width: 20%;"></div>
+            </div>
+            <div class="tri-color-legend">
+              <span id="legend-positive">0% Pos.</span>
+              <span id="legend-neutral">0% Neu.</span>
+              <span id="legend-negative">0% Neg.</span>
+            </div>
+          </div>
+
+          <!-- KPI 3: NPS Predictivo -->
+          <div class="card-horizon" style="display: flex; align-items: center; gap: 16px;">
+            <div style="width: 56px; height: 56px; border-radius: 50%; background-color: var(--hz-warning-subtle); color: var(--hz-warning); display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
+              <i class="ti ti-trending-up"></i>
+            </div>
+            <div>
+              <span style="font-size: 0.8rem; font-weight: 600; color: var(--hz-text-muted); text-transform: uppercase; letter-spacing: 0.05em;">
+                NPS Predictivo
+              </span>
+              <div style="font-size: 1.75rem; font-weight: 800; color: var(--hz-text-title);" id="kpi-predictive-nps">+0</div>
+              <div style="font-size: 0.75rem; color: var(--hz-text-secondary);" id="kpi-nps-status">
+                Salud general: Saludable
+              </div>
+            </div>
+          </div>
+
+          <!-- KPI 4: Casos en Riesgo -->
+          <div class="card-horizon" style="display: flex; align-items: center; gap: 16px;">
+            <div style="width: 56px; height: 56px; border-radius: 50%; background-color: var(--hz-danger-subtle); color: var(--hz-danger); display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
+              <i class="ti ti-user-exclamation"></i>
+            </div>
+            <div>
+              <span style="font-size: 0.8rem; font-weight: 600; color: var(--hz-text-muted); text-transform: uppercase; letter-spacing: 0.05em;">
+                Casos en Riesgo
+              </span>
+              <div style="font-size: 1.75rem; font-weight: 800; color: var(--hz-danger);" id="kpi-risk-total">0 Casos</div>
+              <div style="display: flex; gap: 6px; margin-top: 4px;">
+                <span id="pill-high-count" class="score-badge high">0 Alto</span>
+                <span id="pill-critical-count" class="score-badge critical">0 Críticos</span>
+              </div>
+            </div>
+          </div>
+
+        </section>
+
+        <!-- 2. ZONA DE GRÁFICOS HORIZON -->
+        <section style="display: grid; grid-template-columns: 3fr 2fr; gap: 20px;">
+          
+          <!-- Gráfico 1: Evolución Temporal -->
+          <div class="card-horizon">
+            <div style="margin-bottom: 16px;">
+              <h2 style="font-size: 1.1rem; font-weight: 700; color: var(--hz-text-title); display: flex; align-items: center; gap: 8px;">
+                <i class="ti ti-chart-area-line" style="color: var(--hz-primary-light);"></i>
+                Evolución Temporal del Sentimiento (30d)
+              </h2>
+              <span style="font-size: 0.8rem; color: var(--hz-text-muted);">Interacciones clasificadas diariamente por la IA</span>
+            </div>
+            <div style="position: relative; width: 100%; height: 280px;">
+              <canvas id="sentimentTrendChart"></canvas>
+            </div>
+          </div>
+
+          <!-- Gráfico 2: Puntos de Fricción -->
+          <div class="card-horizon">
+            <div style="margin-bottom: 16px;">
+              <h2 style="font-size: 1.1rem; font-weight: 700; color: var(--hz-text-title); display: flex; align-items: center; gap: 8px;">
+                <i class="ti ti-chart-bar" style="color: var(--hz-info);"></i>
+                Puntos de Fricción Principales
+              </h2>
+              <span style="font-size: 0.8rem; color: var(--hz-text-muted);">Menciones agrupadas por categoría funcional</span>
+            </div>
+            <div style="position: relative; width: 100%; height: 280px;">
+              <canvas id="frictionChart"></canvas>
+            </div>
+          </div>
+
+        </section>
+
+        <!-- 3. CONSOLA DE INTERVENCIÓN & CASOS CRÍTICOS (HORIZON TABLE) -->
+        <section class="card-horizon" id="console">
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; margin-bottom: 20px;">
+            <div>
+              <h2 style="font-size: 1.15rem; font-weight: 800; color: var(--hz-text-title); display: flex; align-items: center; gap: 8px;">
+                <i class="ti ti-clipboard-check" style="color: var(--hz-primary-light);"></i>
+                Consola de Intervención &amp; Casos de Alto Riesgo
+              </h2>
+            </div>
+
+            <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+              <!-- Filter Tabs -->
+              <div class="filter-btn-group" role="group">
+                <button class="filter-btn active" data-filter="ALL">Todos</button>
+                <button class="filter-btn" data-filter="CRITICAL">Solo Críticos</button>
+                <button class="filter-btn" data-filter="PENDING">Pendientes</button>
+              </div>
+
+              <!-- Live Search Input -->
+              <div class="search-box-container">
+                <i class="ti ti-search"></i>
+                <input type="text" id="table-search-input" placeholder="Buscar cliente o fricción...">
+              </div>
+            </div>
+          </div>
+
+          <!-- Responsive Horizon Table -->
+          <div style="overflow-x: auto; border: 1px solid var(--hz-border); border-radius: 16px;">
+            <table style="width: 100%; border-collapse: collapse; text-align: left;">
+              <thead>
+                <tr style="background-color: var(--hz-bg); border-bottom: 1px solid var(--hz-border); color: var(--hz-text-muted); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em;">
+                  <th style="padding: 14px 18px;">Cliente</th>
+                  <th style="padding: 14px 18px;">Tier</th>
+                  <th style="padding: 14px 18px;">Risk Score</th>
+                  <th style="padding: 14px 18px;">Fricción Principal</th>
+                  <th style="padding: 14px 18px;">Evidencia Semántica (PII Masked)</th>
+                  <th style="padding: 14px 18px;">Acciones</th>
+                </tr>
+              </thead>
+              <tbody id="risk-table-body">
+                <!-- Dynamic Rows from ui_controller.js -->
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- 4. CARGA MASIVA DE ARCHIVOS CSV (HORIZON INGESTION CARD) -->
+        <section class="card-horizon" id="csv-upload">
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px; flex-wrap: wrap; gap: 12px;">
+            <div>
+              <h2 style="font-size: 1.15rem; font-weight: 800; color: var(--hz-text-title); display: flex; align-items: center; gap: 8px;">
+                <i class="ti ti-file-upload" style="color: var(--hz-primary-light);"></i>
+                Carga Masiva de Archivos CSV Limpios
+              </h2>
+              <p style="font-size: 0.85rem; color: var(--hz-text-secondary); margin-top: 4px;">
+                Cargue archivos <code>.csv</code> con feedback histórico o datasets para procesarlos por el AI Pipeline en lote.
+              </p>
+            </div>
+            
+            <div style="display: flex; gap: 8px; align-items: center;">
+              <span class="badge" style="background: rgba(67, 24, 255, 0.12); color: var(--hz-primary-light); font-weight: 700; padding: 6px 12px; border-radius: 20px; font-size: 0.8rem;">
+                <i class="ti ti-database"></i> Datasets Disponibles: 10K &bull; 1M
+              </span>
+            </div>
+          </div>
+
+          <!-- Native HTML File Input linked to Label for 100% Guaranteed Native Browser File Picker -->
+          <input type="file" id="csv-file-input" accept=".csv" style="display: none;">
+
+          <!-- Drag & Drop Upload Zone (Native Label) -->
+          <label for="csv-file-input" id="csv-drop-zone" style="display: block; border: 2px dashed var(--hz-border); border-radius: 16px; padding: 32px 20px; text-align: center; background: rgba(255, 255, 255, 0.02); transition: all 0.2s ease; cursor: pointer; margin-bottom: 20px;">
+            <div style="font-size: 2.2rem; color: var(--hz-primary-light); margin-bottom: 8px;">
+              <i class="ti ti-cloud-upload"></i>
+            </div>
+            <div style="font-weight: 700; font-size: 0.95rem; color: var(--hz-text-title); margin-bottom: 4px;" id="csv-file-name-label">
+              Arrastre y suelte su archivo .CSV aquí o haga clic para seleccionar
+            </div>
+            <div style="font-size: 0.8rem; color: var(--hz-text-muted);">
+              Soporta columnas estándar: <code>customer_external_id, source_type, tier, content, external_reference_id</code>
+            </div>
+          </label>
+
+          <!-- Controls: Max records limit & Run button -->
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; background: var(--hz-bg); padding: 16px 20px; border-radius: 14px; border: 1px solid var(--hz-border);">
+            <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+              <label for="csv-max-records-select" style="font-size: 0.85rem; font-weight: 600; color: var(--hz-text-title);">
+                Límite de Procesamiento:
+              </label>
+              <select id="csv-max-records-select" style="background: var(--hz-card-bg); color: var(--hz-text-title); border: 1px solid var(--hz-border); padding: 8px 12px; border-radius: 8px; font-weight: 600; font-size: 0.85rem;">
+                <option value="100">100 registros (Prueba Rápida)</option>
+                <option value="500">500 registros</option>
+                <option value="1000" selected>1,000 registros (Recomendado)</option>
+                <option value="5000">5,000 registros</option>
+                <option value="10000">10,000 registros (Dataset 10K Completo)</option>
+                <option value="0">Todos los registros del archivo</option>
+              </select>
+            </div>
+
+            <div style="display: flex; gap: 12px; align-items: center;">
+              <button type="button" id="btn-load-10k-preset" onclick="window.loadPreset10kDataset && window.loadPreset10kDataset(event)" class="btn-secondary" style="font-size: 0.85rem; padding: 10px 16px; display: flex; align-items: center; gap: 6px; border: 1px solid var(--hz-border); background: var(--hz-card-bg); color: var(--hz-text-title); border-radius: 10px; cursor: pointer; font-weight: 600;">
+                <i class="ti ti-file-text" style="color: var(--hz-info);"></i> Cargar Dataset 10K
+              </button>
+              <button type="button" id="btn-csv-upload-submit" onclick="window.submitBatchCsvUpload && window.submitBatchCsvUpload(event)" class="btn-primary" style="display: flex; align-items: center; gap: 8px;">
+                <i class="ti ti-rocket"></i> Iniciar Ingesta Batch
+              </button>
+            </div>
+          </div>
+
+          <!-- Batch Upload Result Box -->
+          <div id="csv-result-box" style="display: none; margin-top: 16px; padding: 16px 20px; border-radius: 12px; background: rgba(5, 205, 153, 0.08); border: 1px solid rgba(5, 205, 153, 0.25);">
+            <div style="display: flex; align-items: center; gap: 10px; font-weight: 700; color: var(--hz-success); font-size: 0.9rem; margin-bottom: 6px;">
+              <i class="ti ti-circle-check"></i>
+              <span id="csv-result-title">Ingesta Masiva Completada</span>
+            </div>
+            <div id="csv-result-details" style="font-size: 0.85rem; color: var(--hz-text-secondary); display: flex; gap: 18px; flex-wrap: wrap;">
+              <!-- Details populated by JS -->
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </main>
+  </div>
+
+  <!-- INTERVENTION DETAIL MODAL -->
+  <div id="intervention-modal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 id="modal-title">
+          <i class="ti ti-shield-check" style="color: var(--hz-primary-light);"></i>
+          Intervención de Caso: <span id="modal-customer-name">--</span>
+        </h3>
+        <button id="btn-modal-close" class="btn-close" aria-label="Cerrar modal">
+          <i class="ti ti-x"></i>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <!-- Metadata -->
+        <div style="display: flex; justify-content: space-between; align-items: center; background-color: var(--hz-bg); padding: 14px 18px; border-radius: 12px; border: 1px solid var(--hz-border);">
+          <div>
+            <div style="font-size: 0.75rem; color: var(--hz-text-muted);">ID ALERTA / TIER</div>
+            <div style="font-weight: 700; font-size: 0.9rem;">
+              <span id="modal-case-id">--</span> &bull; Tier <span id="modal-tier">--</span>
+            </div>
+          </div>
+          <div>
+            <div style="font-size: 0.75rem; color: var(--hz-text-muted); text-align: right;">MOTOR DE IA</div>
+            <div id="modal-ai-engine" class="ai-engine-chip">cloud_gemini</div>
+          </div>
+          <div style="text-align: right;">
+            <div style="font-size: 0.75rem; color: var(--hz-text-muted);">SCORE DE RIESGO</div>
+            <div id="modal-risk-score" style="font-weight: 800; color: var(--hz-danger); font-size: 1rem;">90 pts</div>
+          </div>
+        </div>
+
+        <!-- Evidencia Textual -->
+        <div class="detail-section">
+          <h4>Evidencia Textual Detectada (PII Masked)</h4>
+          <div id="modal-evidence-text" style="background-color: var(--hz-bg); padding: 14px; border-radius: 12px; border: 1px solid var(--hz-border); font-size: 0.85rem; color: var(--hz-text-secondary); font-style: italic;">
+            "--"
+          </div>
+        </div>
+
+        <!-- Score Factors Breakdown -->
+        <div class="detail-section">
+          <h4>Factores Determinantes del Score</h4>
+          <div id="modal-score-factors" class="factors-list">
+            <!-- Dynamic list -->
+          </div>
+        </div>
+
+        <!-- Formulario Estado -->
+        <div class="detail-section">
+          <h4>Cambiar Estado de la Alerta</h4>
+          <div style="display: flex; gap: 16px; margin-bottom: 10px;">
+            <label style="display: flex; align-items: center; gap: 6px; cursor: pointer; font-size: 0.85rem;">
+              <input type="radio" name="modal-status" value="PENDING">
+              <span class="status-chip status-pending">PENDING</span>
+            </label>
+            <label style="display: flex; align-items: center; gap: 6px; cursor: pointer; font-size: 0.85rem;">
+              <input type="radio" name="modal-status" value="IN_REVIEW">
+              <span class="status-chip status-review">IN_REVIEW</span>
+            </label>
+            <label style="display: flex; align-items: center; gap: 6px; cursor: pointer; font-size: 0.85rem;">
+              <input type="radio" name="modal-status" value="RESOLVED">
+              <span class="status-chip status-resolved">RESOLVED</span>
+            </label>
+          </div>
+
+          <div class="form-group">
+            <label for="modal-notes-input">Notas de Gestión / CSM</label>
+            <textarea id="modal-notes-input" rows="3" placeholder="Añada observaciones de la llamada o solución aplicada al cliente..."></textarea>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button id="btn-modal-cancel" class="btn-secondary">Cancelar</button>
+        <button id="btn-modal-save" class="btn-primary">
+          <i class="ti ti-check"></i>
+          Guardar Cambios
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST STACK -->
+  <div id="toast-container" class="toast-container" aria-live="polite"></div>
+
+  <!-- App Main Entry Point (ES Module) -->
+  <script type="module" src="js/app.js?v=8"></script>
+
+  <!-- Horizon Theme Toggle Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const themeToggle = document.getElementById('theme-toggle');
+      if (themeToggle) {
+        const iconSun = themeToggle.querySelector('.icon-sun');
+        const iconMoon = themeToggle.querySelector('.icon-moon');
+
+        function setTheme(theme) {
+          document.documentElement.setAttribute('data-theme', theme);
+          localStorage.setItem('horizon-theme', theme);
+          if (theme === 'light') {
+            iconSun.style.display = 'none';
+            iconMoon.style.display = 'block';
+          } else {
+            iconSun.style.display = 'block';
+            iconMoon.style.display = 'none';
+          }
+        }
+
+        const savedTheme = localStorage.getItem('horizon-theme') || 'dark';
+        setTheme(savedTheme);
+
+        themeToggle.addEventListener('click', () => {
+          const current = document.documentElement.getAttribute('data-theme');
+          setTheme(current === 'dark' ? 'light' : 'dark');
+        });
+      }
+    });
+  </script>
+</body>
+</html>

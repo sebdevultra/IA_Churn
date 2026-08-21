@@ -18,8 +18,8 @@ from ai_pipeline.scheduler_ingestion import AIIngestionWorker
 
 @pytest.fixture
 def orchestrator():
-    # Inicializado en modo local-first resiliente (sin API key de prueba para determinismo puro)
-    return AIPipelineOrchestrator(enable_cloud=False)
+    # Inicializado con conexión a Cloud LLM (Gemini 2.5) habilitada
+    return AIPipelineOrchestrator(enable_cloud=True)
 
 
 # ============================================================================

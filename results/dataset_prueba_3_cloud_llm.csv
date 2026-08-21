@@ -1,0 +1,26 @@
+ID,Cliente_Tier,Canal,Texto_Entrada,Enrutamiento_Esperado,Sentimiento_Esperado,Friccion_Esperada,Churn_Intent,Motivo_Enrutamiento
+CLOUD_001,Enterprise,support_ticket,"Excelente soporte por parte de Laura, resolvieron la duda en 5 minutos.",FAST_PATH_LOCAL,POSITIVE,none,False,Positivo claro con alta confianza (ahorro de tokens)
+CLOUD_002,Enterprise,support_ticket,"Estamos evaluando no renovar el contrato anual debido a las caídas constantes en la pasarela de pagos.",ESCALATE_CLOUD,NEGATIVE,product_reliability,True,Cliente Enterprise con riesgo crítico de Churn
+CLOUD_003,Standard,nps_survey,"El software es muy rápido y fácil de configurar, nos encantó.",FAST_PATH_LOCAL,POSITIVE,none,False,Positivo estándar (0 costo cloud)
+CLOUD_004,Enterprise,chat,"Una maravilla su sistema... borró la base de datos de producción y cobraron el doble 👏",ESCALATE_CLOUD,NEGATIVE,billing_pricing,False,Sarcasmo complejo y cliente Enterprise
+CLOUD_005,Standard,support_ticket,"Soy Andrés Pérez con Cédula 79111222, necesito cambiar mi correo a andres@empresa.com.",FAST_PATH_LOCAL,NEUTRAL,security_privacy,False,Trámite administrativo neutro con PII
+CLOUD_006,Enterprise,support_ticket,"Si no aumentan el límite de API para este viernes, iniciaremos la migración a la competencia.",ESCALATE_CLOUD,NEGATIVE,feature_gap,True,Amenaza explícita de migración en cuenta corporativa
+CLOUD_007,Standard,review,"La aplicación se cierra sola cada vez que intento generar un reporte en PDF.",ESCALATE_CLOUD,NEGATIVE,product_reliability,False,Falla técnica de producto no resuelta
+CLOUD_008,Enterprise,support_ticket,"Nadie responde nuestros tickets críticos de soporte, llevamos 72 horas detenidos.",ESCALATE_CLOUD,NEGATIVE,customer_support,False,Incumplimiento grave de SLA en cuenta Enterprise
+CLOUD_009,Standard,chat,"Muchas gracias por la ayuda, todo quedó perfecto.",FAST_PATH_LOCAL,POSITIVE,none,False,Agradecimiento directo (Fast-Path)
+CLOUD_010,Enterprise,support_ticket,"El área financiera exige suspender el cobro recurrente de la tarjeta 4532... por auditoría.",ESCALATE_CLOUD,NEGATIVE,billing_pricing,True,Solicitud de cese de cobro corporativo
+CLOUD_011,Standard,support_ticket,"No entiendo cómo configurar los permisos de usuario en la nueva versión.",FAST_PATH_LOCAL,NEUTRAL,feature_gap,False,Duda de uso estándar
+CLOUD_012,Enterprise,support_ticket,"Detectamos que la API filtra información confidencial en los encabezados HTTP.",ESCALATE_CLOUD,NEGATIVE,security_privacy,False,Vulnerabilidad de seguridad en cuenta Enterprise
+CLOUD_013,Standard,review,"Pésimo servicio, me cobraron el plan sin mi consentimiento, exijo la baja inmediata.",ESCALATE_CLOUD,NEGATIVE,billing_pricing,True,Queja de cobro con solicitud de baja
+CLOUD_014,Enterprise,support_ticket,"Todo el equipo está muy conforme con el nuevo módulo de analítica predictiva.",FAST_PATH_LOCAL,POSITIVE,none,False,Feedback corporativo positivo (Fast-Path)
+CLOUD_015,Enterprise,chat,"Estamos analizando cotizaciones de su competidor directo para comparar costos de renovación.",ESCALATE_CLOUD,NEGATIVE,billing_pricing,True,Evaluación de competidores corporativos
+CLOUD_016,Standard,support_ticket,"El botón de exportar a Excel no hace nada en Google Chrome.",ESCALATE_CLOUD,NEGATIVE,product_reliability,False,Bug en navegador web
+CLOUD_017,Standard,chat,"Hola, buenas tardes, quería consultar los horarios de atención.",FAST_PATH_LOCAL,NEUTRAL,none,False,Consulta general neutra
+CLOUD_018,Enterprise,support_ticket,"La latencia de la base de datos pasó de 10ms a 4000ms tras el último despliegue.",ESCALATE_CLOUD,NEGATIVE,product_reliability,False,Degradación severa de rendimiento
+CLOUD_019,Enterprise,support_ticket,"Pedimos cancelar la suscripción Enterprise por incumplimiento reiterado de características.",ESCALATE_CLOUD,NEGATIVE,feature_gap,True,Cancelación Enterprise por Feature Gap
+CLOUD_020,Standard,review,"Increíble soporte técnico, resolvieron mi problema en menos de 10 minutos 10/10.",FAST_PATH_LOCAL,POSITIVE,none,False,Reseña 5 estrellas (Fast-Path)
+CLOUD_021,Enterprise,support_ticket,"El asesor asignado a nuestra cuenta nunca se presentó a la reunión de seguimiento trimestral.",ESCALATE_CLOUD,NEGATIVE,customer_support,False,Falla de atención en cuenta VIP
+CLOUD_022,Standard,support_ticket,"Cobro duplicado en la tarjeta de crédito terminada en 9988, favor reembolsar.",ESCALATE_CLOUD,NEGATIVE,billing_pricing,False,Fricción financiera con solicitud de reembolso
+CLOUD_023,Standard,chat,"¿Tienen algún tutorial sobre cómo conectar webhooks?",FAST_PATH_LOCAL,NEUTRAL,none,False,Pregunta informativa (Fast-Path)
+CLOUD_024,Enterprise,support_ticket,"Nuestra junta directiva determinó recortar el presupuesto y no prorrogar el contrato.",ESCALATE_CLOUD,NEGATIVE,billing_pricing,True,Decisión directiva de no renovación
+CLOUD_025,Enterprise,support_ticket,"La estabilidad de la plataforma ha mejorado notablemente este mes, felicitaciones al equipo.",FAST_PATH_LOCAL,POSITIVE,none,False,Felicitación corporativa (Fast-Path)

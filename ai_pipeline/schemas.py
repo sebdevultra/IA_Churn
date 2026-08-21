@@ -22,6 +22,7 @@ class EmotionType(str, Enum):
     CONFUSION = "confusion"
     FRUSTRATION = "frustration"
     ANGER = "anger"
+    ANXIETY = "anxiety"
 
 
 class FrictionCategory(str, Enum):
@@ -30,7 +31,9 @@ class FrictionCategory(str, Enum):
     CUSTOMER_SUPPORT = "customer_support"
     FEATURE_GAP = "feature_gap"
     SLA_DELAY = "sla_delay"
+    SECURITY_PRIVACY = "security_privacy"
     NONE = "none"
+
 
 
 class InteractionSource(str, Enum):

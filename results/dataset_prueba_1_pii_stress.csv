@@ -1,0 +1,51 @@
+id,categoria,texto_prueba
+1,PII_Inicio,+573151234567-ID-1020304050-SSN-999121234-EUR quiero tramitar la cancelación absoluta de mi cuenta ya.
+2,PII_Inicio,NIT800192837-4-RUT-102030-RFC-ABC123456XYZ-DNI94827103 solicito de manera irrevocable la baja de sus servicios.
+3,PII_Inicio,IBAN-ES2114650100322012345678-BIC-CHASEX44-CCV992 deseo rescindir el contrato vigente y cesar los pagos recurrentes.
+4,PII_Inicio,IP:192.168.1.105-MAC:00:1A:2B:3C:4D:5E-PORT:8080-USER:99283 me canse del mal servicio tecnico y exijo la baja total.
+5,PII_Inicio,CURP:PEJU800101HDFRRN09-RFC:PEJU800101-NSS:12345678901 procedo con la cancelacion definitiva de mi suscripcion premium.
+6,PII_Inicio,UID:94827-TOKEN:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9-REF:39281 ya no quiero continuar pagando la mensualidad de este producto.
+7,PII_Inicio,CPF:123.456.789-00-RG:12.345.678-X-BRL-SAOPAULO solicito el cierre inmediato de mi cuenta y borrado de registros.
+8,PII_Inicio,LAT:4.7110-LON:-74.0721-ALT:2640-GEO:COL-BOGOTA-LOC_ID:88291 exijo anular mi suscripcion por insatisfaccion con el servicio.
+9,PII_Inicio,0x7123A_USER_9482710394_REFN_99283471A99B_HASH_AUTH denme de baja inmediatamente de la plataforma.
+10,PII_Inicio,PASSPORT:ABC123456-COUNTRY:MEX-EXP:2030-AUT:SEGOB-ID:0029384 terminare mi relacion comercial con ustedes a partir de hoy.
+11,PII_Final,Solicito la baja inmediata. Registren mi identidad internacional: +573151234567-ID-1020304050-SSN-999121234-EUR.
+12,PII_Final,Quiero cancelar el plan contratado hoy mismo para la cuenta asociada a NIT800192837-4-RUT-102030-RFC-ABC123456XYZ-DNI94827103.
+13,PII_Final,Deseo rescindir mi contrato de inmediato debido a cobros erroneos en IBAN-ES2114650100322012345678-BIC-CHASEX44-CCV992.
+14,PII_Final,Ya no quiero seguir utilizando esta aplicacion inestable. Eliminen el perfil IP:192.168.1.105-MAC:00:1A:2B:3C:4D:5E-PORT:8080-USER:99283.
+15,PII_Final,Procedo con la baja definitiva de todos los servicios vinculados a CURP:PEJU800101HDFRRN09-RFC:PEJU800101-NSS:12345678901.
+16,PII_Final,No voy a renovar la suscripcion el proximo mes bajo la cuenta UID:94827-TOKEN:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9-REF:39281.
+17,PII_Final,Solicito el cierre de cuenta y remocion de datos financieros vinculados a CPF:123.456.789-00-RG:12.345.678-X-BRL-SAOPAULO.
+18,PII_Final,Exijo anular el contrato del modem satelital ubicado en LAT:4.7110-LON:-74.0721-ALT:2640-GEO:COL-BOGOTA-LOC_ID:88291.
+19,PII_Final,Denme de baja del sistema corporativo inmediatamente. Registro de sesion: 0x7123A_USER_9482710394_REFN_99283471A99B_HASH_AUTH.
+20,PII_Final,Quiero rescindir de su plan de telefonia movil de inmediato. Titular: PASSPORT:ABC123456-COUNTRY:MEX-EXP:2030-AUT:SEGOB-ID:0029384.
+21,PII_Sandwich,Cerrar cuenta +573151234567-ID-1020304050-SSN-999121234-EUR de forma inmediata.
+22,PII_Sandwich,Quiero la baja de NIT800192837-4-RUT-102030-RFC-ABC123456XYZ-DNI94827103 porque no uso el servicio.
+23,PII_Sandwich,Solicito rescindir IBAN-ES2114650100322012345678-BIC-CHASEX44-CCV992 ya que cerre esa cuenta bancaria.
+24,PII_Sandwich,Exijo cancelar IP:192.168.1.105-MAC:00:1A:2B:3C:4D:5E-PORT:8080-USER:99283 puesto que el servidor cambio.
+25,PII_Sandwich,Tramitar baja de CURP:PEJU800101HDFRRN09-RFC:PEJU800101-NSS:12345678901 de manera irrevocable hoy.
+26,PII_Sandwich,No renovar UID:94827-TOKEN:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9-REF:39281 debido al incremento abusivo de tarifas.
+27,PII_Sandwich,Cerrar perfil CPF:123.456.789-00-RG:12.345.678-X-BRL-SAOPAULO y rescindir todo vinculo comercial.
+28,PII_Sandwich,Anular contrato LAT:4.7110-LON:-74.0721-ALT:2640-GEO:COL-BOGOTA-LOC_ID:88291 porque desmonte la oficina.
+29,PII_Sandwich,Solicito cancelacion 0x7123A_USER_9482710394_REFN_99283471A99B_HASH_AUTH de inmediato sin excepciones.
+30,PII_Sandwich,Dar de baja PASSPORT:ABC123456-COUNTRY:MEX-EXP:2030-AUT:SEGOB-ID:0029384 ya que no regresare al pais.
+31,Logs_Sistema,[CRITICAL_FAILURE][SYS_LOG_948201] El cliente exige la cancelacion de cuenta por fallas reiteradas.
+32,Logs_Sistema,ERROR_CODE:503-PROD_ID:99281-CONN:TIMEOUT_ERR_ABORT el usuario se canso de esperar y pide la baja.
+33,Logs_Sistema,AWS_ARN:aws:iam::123456789012:user/PerezJ-STATUS:INACTIVE tramitar rescision de cuenta cloud.
+34,Logs_Sistema,DB_QUERY:SELECT*FROM_users_WHERE_id=9921_AND_status='SUSPENDED' deseo anular mi suscripcion por completo.
+35,Logs_Sistema,"JSON_STRING:{""user"":""juan_perez"",""action"":""request_churn"",""session"":""0x9928A1F""} dar de baja el servicio."
+36,Logs_Sistema,Quiero rescindir mi contrato de inmediato [LOG_METADATA: APP_VERSION=4.2.1-BUILD=99283-ENV=PROD].
+37,Logs_Sistema,Proceder con el cierre definitivo de la cuenta comercial [ERR_DB_INTEGRITY_VIOLATION_UID_99218].
+38,Logs_Sistema,No deseo continuar con la renovacion automatica [CRON_JOB_ID:994827103_CLEANUP_EXECUTE].
+39,Logs_Sistema,Exijo la anulacion del cobro y la baja de la app [STACK_TRACE: at main.py line 45 in user_auth].
+40,Logs_Sistema,[ALERT_CHURN_TRIGGERED_FALSE] El usuario solicita formalmente cancelar su cuenta de soporte premium.
+41,Web_URL_Params,https://www.miservicio.com/dashboard/settings/billing/cancel?user_id=992831&token=a892f91c99b23e&ref=organic deseo mi baja.
+42,Web_URL_Params,Quiero cancelar mi suscripcion desde este enlace https://api.servicio.co/v2/users/delete?confirm=true&reason=expensive.
+43,Web_URL_Params,Solicito la rescision del servicio web tracking_pixel_id=99283471&utm_source=facebook&utm_medium=cpc&utm_campaign=churn_test.
+44,Web_URL_Params,"No mas prorrogas, exijo dar de baja mi cuenta bancaria asociada a redireccion_url=https://securebank.net/void?id=38291."
+45,Web_URL_Params,https://gateway.pagos.com/v1/charge/dispute?invoice_no=992831&auth=00291_SUCCESS proceder con la cancelacion total.
+46,Web_URL_Params,Anular contrato de inmediato. Ref de navegacion: /app/user/profile/delete_account/confirm_step_3?locale=es_CO&device=android.
+47,Web_URL_Params,Deseo cerrar mi perfil corporativo de forma definitiva /api/v1/auth/logout?redirect_to=null&clear_cache=true.
+48,Web_URL_Params,https://subdominio.dominio.info/index.php?option=com_users&task=profile.cancel_subscription&id=992 ya no los quiero.
+49,Web_URL_Params,Exijo la anulacion total de mi membresia activa cookies_accepted=true&session_duration=3600&user_tier=vip_churn.
+50,Web_URL_Params,Tramitar baja inmediata. Vinculo: https://www.plataforma.com/bajas?user=102030&hash=7123A99B&status=abort.

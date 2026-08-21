@@ -1,0 +1,81 @@
+ID,Tipo_Prueba,Texto_Entrada,Sentimiento_Esperado,Emocion_Esperada,Friccion_Esperada,Churn_Intent,Risk_Score_Minimo,Mascaras_Esperadas
+ADV_001,Sarcasmo puro,"Una maravilla de sistema, me borraron todos los datos y me cobraron el triple en la factura 👏",NEGATIVE,FRUSTRATION,billing_pricing,False,50,N/A
+ADV_002,Amenaza sutil de Churn,Estamos analizando otras opciones de software para no renovar el próximo mes por los constantes errores técnicos.,NEGATIVE,FRUSTRATION,product_reliability,True,75,N/A
+ADV_003,Inyección de datos sensibles (PII),"Soy Carlos Ruiz con Cédula 1020304050, tel 3159998877, cuenta de ahorros No. 9876543210 y API Key sk_live_998877665544.",NEUTRAL,NEUTRAL,security_privacy,False,20,"[NAME_MASKED], [ID_DOC_MASKED], [PHONE_MASKED], [BANK_ACCOUNT_MASKED], [SECRET_MASKED]"
+ADV_004,Sarcasmo puro,"Qué genial servicio, el servidor se cayó en pleno lanzamiento y perdimos 10k dólares de ventas. Excelente trabajo.",NEGATIVE,FRUSTRATION,customer_support,False,60,N/A
+ADV_005,Sarcasmo puro,"Me encanta su soporte técnico, llevo 4 días esperando respuesta mientras mi negocio está completamente detenido 5 estrellas.",NEGATIVE,FRUSTRATION,customer_support,False,60,N/A
+ADV_006,Sarcasmo puro,"Espectacular la nueva actualización, ahora la app ni siquiera abre y se cierra sola. Son unos genios.",NEGATIVE,FRUSTRATION,product_reliability,False,60,N/A
+ADV_007,Sarcasmo puro,"Qué delicia de plataforma, duplicaron la suscripción sin avisar y el soporte dice que no hacen reembolsos. Bravo.",NEGATIVE,FRUSTRATION,product_reliability,False,60,N/A
+ADV_008,Sarcasmo puro,"Un éxito total su API, responde con error 500 el 90% de las veces. No se puede pedir más eficiencia.",NEGATIVE,FRUSTRATION,product_reliability,False,60,N/A
+ADV_009,Sarcasmo puro,"Increíble interfaz, pasé 3 horas buscando cómo exportar un reporte y al final la opción da pantalla en blanco. Fascinante.",NEGATIVE,FRUSTRATION,product_reliability,False,60,N/A
+ADV_010,Sarcasmo puro,"Súper veloz el procesamiento de datos, un lote de 100 filas tarda apenas 45 minutos. Una bala.",NEGATIVE,FRUSTRATION,customer_support,False,60,N/A
+ADV_011,Sarcasmo puro,"Maravilloso diseño de base de datos, cada consulta bloquea las tablas por completo y tumba el backend. Felicitaciones.",NEGATIVE,FRUSTRATION,customer_support,False,60,N/A
+ADV_012,Sarcasmo puro,"Qué seguridad tan impecable, cualquiera puede ver las facturas de otros clientes cambiando el ID en la URL. Un aplauso.",NEGATIVE,FRUSTRATION,billing_pricing,False,60,N/A
+ADV_013,Sarcasmo puro,"Qué amables sus asesores, me colgaron la llamada tras decirme que el problema era de mi internet cuando sus servidores no responden.",NEGATIVE,FRUSTRATION,product_reliability,False,60,N/A
+ADV_014,Sarcasmo puro,"Un poema de plataforma, borró los permisos de todo el equipo de desarrollo de la noche a la mañana. Qué gran ayuda.",NEGATIVE,FRUSTRATION,product_reliability,False,60,N/A
+ADV_015,Sarcasmo puro,La cumbre de la ingeniería de software: actualizas el perfil y se cambia el idioma a mandarín automáticamente. Genial.,NEGATIVE,FRUSTRATION,product_reliability,False,60,N/A
+ADV_016,Sarcasmo puro,Qué maravilla que el panel de control se quede colgado cargando infinitamente justo cuando tengo auditoría interna.,NEGATIVE,FRUSTRATION,product_reliability,False,60,N/A
+ADV_017,Sarcasmo puro,Precioso el detalle de cobrarme cargos ocultos por 'mantenimiento de nube' que nunca estuvieron en el contrato inicial. Gracias.,NEGATIVE,FRUSTRATION,billing_pricing,False,60,N/A
+ADV_018,Amenaza sutil de Churn,Ya solicitamos cotización a su competencia directa dado que los tiempos de inactividad están afectando nuestros SLA con clientes.,NEGATIVE,FRUSTRATION,product_reliability,True,80,N/A
+ADV_019,Amenaza sutil de Churn,El departamento de compras está revisando si se justifica el gasto de la renovación anual viendo el bajo rendimiento actual.,NEGATIVE,FRUSTRATION,product_reliability,True,80,N/A
+ADV_020,Amenaza sutil de Churn,Por favor indíquenme los pasos legales para revocar el contrato firmado el mes pasado debido al incumplimiento de características.,NEGATIVE,FRUSTRATION,billing_pricing,True,80,N/A
+ADV_021,Amenaza sutil de Churn,"Agradecemos suspender el cobro recurrente automático, evaluaremos si seguimos con el servicio de forma manual el trimestre entrante.",NEGATIVE,FRUSTRATION,billing_pricing,True,80,N/A
+ADV_022,Amenaza sutil de Churn,La junta directiva decidió recortar presupuesto en herramientas de software que presentan bloqueos frecuentes como esta.,NEGATIVE,FRUSTRATION,billing_pricing,True,80,N/A
+ADV_023,Amenaza sutil de Churn,Estamos iniciando un proceso de migración de datos hacia un proveedor local para evitar las intermitencias del sistema.,NEGATIVE,FRUSTRATION,product_reliability,True,80,N/A
+ADV_024,Amenaza sutil de Churn,"Si no se soluciona el problema de sincronización antes del viernes, nos veremos obligados a buscar una alternativa en el mercado.",NEGATIVE,FRUSTRATION,product_reliability,True,80,N/A
+ADV_025,Amenaza sutil de Churn,"Dado que las últimas tres actualizaciones rompieron la integración, es inviable mantener la renovación automática activa.",NEGATIVE,FRUSTRATION,product_reliability,True,80,N/A
+ADV_026,Amenaza sutil de Churn,El equipo de desarrollo ya está construyendo un módulo interno para reemplazar este módulo por falta de estabilidad.,NEGATIVE,FRUSTRATION,product_reliability,True,80,N/A
+ADV_027,Amenaza sutil de Churn,Por favor verifiquen la fecha límite para dar aviso de no renovación sin penalizaciones contractuales.,NEGATIVE,FRUSTRATION,billing_pricing,True,80,N/A
+ADV_028,Amenaza sutil de Churn,"No vemos un retorno de inversión claro con las constantes caídas, por lo que estamos evaluando rescindir el servicio.",NEGATIVE,FRUSTRATION,product_reliability,True,80,N/A
+ADV_029,Amenaza sutil de Churn,Nuestra cuenta quedará inactiva temporalmente a partir del próximo ciclo de facturación mientras probamos otra plataforma.,NEGATIVE,FRUSTRATION,billing_pricing,True,80,N/A
+ADV_030,Amenaza sutil de Churn,"El nivel de servicio actual no cumple los estándares de nuestra empresa, iniciaremos la transición a otro sistema este fin de semana.",NEGATIVE,FRUSTRATION,customer_support,True,80,N/A
+ADV_031,Amenaza sutil de Churn,Solicito la devolución del saldo a favor; el equipo decidió migrar las operaciones comerciales a una infraestructura externa.,NEGATIVE,FRUSTRATION,billing_pricing,True,80,N/A
+ADV_032,Inyección de datos sensibles (PII),"Urgente, mi API Key secreta es amzn_aaa_12345_secret y mi clave es Admin1234, eliminen ese log de sus servidores.",NEGATIVE,ANXIETY,security_privacy,False,40,[SECRET_MASKED]
+ADV_033,Inyección de datos sensibles (PII),"Soy Maria Gomez con RUT 99887766-5, mi celular es 3001112233 y mi correo corporativo es maria@empresa.com.",NEUTRAL,NEUTRAL,security_privacy,False,20,"[NAME_MASKED], [ID_DOC_MASKED], [PHONE_MASKED], [BANK_ACCOUNT_MASKED]"
+ADV_034,Inyección de datos sensibles (PII),Alguien expuso el token JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c en la sección pública.,NEUTRAL,ANXIETY,security_privacy,False,20,[SECRET_MASKED]
+ADV_035,Inyección de datos sensibles (PII),Para la transferencia usen mi cuenta corriente Bancolombia 44556677889 a nombre de Jorge Perez con documento 80111222.,NEUTRAL,NEUTRAL,security_privacy,False,20,"[NAME_MASKED], [ID_DOC_MASKED], [PHONE_MASKED], [BANK_ACCOUNT_MASKED]"
+ADV_036,Inyección de datos sensibles (PII),"Configuré el webhook usando el pass temporal TempPass987$ y el ID de usuario usr_998877, arréglenlo.",NEUTRAL,NEUTRAL,security_privacy,False,20,"[NAME_MASKED], [ID_DOC_MASKED], [PHONE_MASKED], [BANK_ACCOUNT_MASKED]"
+ADV_037,Inyección de datos sensibles (PII),"Mi tarjeta de crédito Visa 4111222233334444 vence el 12/28 con CVV 999, cobraron dos veces la membresía.",NEGATIVE,NEUTRAL,security_privacy,False,20,"[NAME_MASKED], [ID_DOC_MASKED], [PHONE_MASKED], [BANK_ACCOUNT_MASKED]"
+ADV_038,Inyección de datos sensibles (PII),"El sistema guardó en texto plano mi clave privada -----BEGIN RSA PRIVATE KEY-----
+MIIEogIBAAKCAQEA0... y mi fono es 555-0192.",NEUTRAL,ANXIETY,security_privacy,False,20,[SECRET_MASKED]
+ADV_039,Inyección de datos sensibles (PII),"Registro fallido para Juan Restrepo, cédula de extranjería CE998877, cuenta de ahorros 0011223344 y clave_dinamica 654321.",NEGATIVE,NEUTRAL,security_privacy,False,20,"[NAME_MASKED], [ID_DOC_MASKED], [PHONE_MASKED], [BANK_ACCOUNT_MASKED]"
+ADV_040,Caso Mixto Complejo,Espectacular soporte técnico... Notifiquen a Juan Castro con cédula 456789 que cancelamos la suscripción por fallos continuos.,NEGATIVE,FRUSTRATION,billing_pricing,True,85,"[NAME_MASKED], [ID_DOC_MASKED]"
+ADV_041,Caso Mixto Complejo,"Excelente sistema. Si no me quitan el cargo extra de la tarjeta 5555444433332222 hoy mismo, iniciamos la migración de plataforma.",NEGATIVE,FRUSTRATION,billing_pricing,True,85,[BANK_ACCOUNT_MASKED]
+ADV_042,Caso Mixto Complejo,"¡Una joya de actualización! Filtró mi API Key sk_prod_abcdef y el teléfono de gerencia 3112223344, cancelaremos el contrato.",NEGATIVE,FRUSTRATION,product_reliability,True,85,[SECRET_MASKED]
+ADV_043,Caso Mixto Complejo,Me encanta perder el tiempo con caídas semanales. Pasen los pasos para dar de baja la cuenta de ahorros registrada 10203040.,NEGATIVE,FRUSTRATION,product_reliability,True,85,[BANK_ACCOUNT_MASKED]
+ADV_044,Caso Mixto Complejo,"Genios absolutos, cobraron el triple en la factura de la cuenta de pruebas. El mes que viene nos pasamos a la competencia sin falta.",NEGATIVE,FRUSTRATION,billing_pricing,True,85,N/A
+ADV_045,Caso Mixto Complejo,Su soporte es una maravilla de ineficiencia. El admin Carlos Diaz (ID 778899) exige borrar todo y rescindir la renovación.,NEGATIVE,FRUSTRATION,product_reliability,True,85,"[NAME_MASKED], [ID_DOC_MASKED]"
+ADV_046,Caso Mixto Complejo,"Qué seguro su entorno, expuso el token de producción eyJhbGciOi... y el RUT 889977-k. Nos vamos del sistema mañana.",NEGATIVE,FRUSTRATION,security_privacy,True,85,[SECRET_MASKED]
+ADV_047,Caso Mixto Complejo,Hermoso servicio: se borraron los datos del cliente corporativo y ahora migraremos todo a AWS. Cierren la cuenta.,NEGATIVE,FRUSTRATION,product_reliability,True,85,N/A
+ADV_048,Caso Mixto Complejo,Su API es tan 'rápida' que expira por timeout. Mi equipo con API Key interna_9988 ya está programando la salida definitiva.,NEGATIVE,FRUSTRATION,product_reliability,True,85,[SECRET_MASKED]
+ADV_049,Caso Mixto Complejo,"Vaya maravilla de cobro duplicado en la tarjeta terminada en 8899. Den de baja el servicio inmediatamente, no renovamos.",NEGATIVE,FRUSTRATION,billing_pricing,True,85,[BANK_ACCOUNT_MASKED]
+SEM_001,Modismos_Coloquiales_Latam,Esta vaina no sirve para nada que porqueria de aplicacion me canse de botar plata y cancelo mi cuenta.,NEGATIVE,FRUSTRATION,product_reliability,True,80,N/A
+SEM_002,Modismos_Coloquiales_Latam,Un fiasco total llevo mamado de esperar que me respondan un bendito ticket de soporte denme de baja ya.,NEGATIVE,FRUSTRATION,customer_support,True,85,N/A
+SEM_003,Modismos_Coloquiales_Latam,Que robo tan descarado con ese cobro duplicado en la tarjeta exijo la devolucion de mi plata y la baja del plan.,NEGATIVE,FRUSTRATION,billing_pricing,True,85,N/A
+SEM_004,Modismos_Coloquiales_Latam,Me tienen harto con tanta inconsistencia y caida de servidor no joda voy a buscar otro servicio.,NEGATIVE,FRUSTRATION,product_reliability,True,80,N/A
+SEM_005,Modismos_Coloquiales_Latam,Que asco de atencion el asesor me colgo la llamada sin resolver nada cierren mi perfil definitivamente.,NEGATIVE,FRUSTRATION,customer_support,True,85,N/A
+SEM_006,Modismos_Coloquiales_Latam,Esa plataforma es una basura se pasa cayendo a cada rato no sigo pagando esta mensualidad ni loco.,NEGATIVE,FRUSTRATION,product_reliability,True,80,N/A
+SEM_007,Modismos_Coloquiales_Latam,Pura incompetencia en ese soporte tecnico llevo semanas perdiendo plata cancelen mi suscripcion de una vez.,NEGATIVE,FRUSTRATION,customer_support,True,85,N/A
+SEM_008,Modismos_Coloquiales_Latam,Que descaro cobrar por un servicio tan malo e inestable no pienso renovar el proximo mes.,NEGATIVE,FRUSTRATION,billing_pricing,True,80,N/A
+SEM_009,Modismos_Coloquiales_Latam,No me aguanto mas este desastre de app me paso a la competencia hoy mismo.,NEGATIVE,FRUSTRATION,product_reliability,True,80,N/A
+SEM_010,Modismos_Coloquiales_Latam,Estoy mamado de los errores en cada factura anulen mi contrato de inmediato.,NEGATIVE,FRUSTRATION,billing_pricing,True,85,N/A
+SEM_011,Frustracion_SLA_Soporte,Llevo 5 dias con el ticket de soporte abierto sin recibir respuesta alguna sobre el bloqueo de mi cuenta.,NEGATIVE,FRUSTRATION,customer_support,False,60,N/A
+SEM_012,Frustracion_SLA_Soporte,Nadie contesta en el chat en vivo y la linea telefonica siempre da ocupada es una pesima atencion al cliente.,NEGATIVE,FRUSTRATION,customer_support,False,60,N/A
+SEM_013,Frustracion_SLA_Soporte,El tiempo de respuesta es inaceptable han incumplido completamente el SLA acordado en el contrato.,NEGATIVE,FRUSTRATION,sla_delay,False,60,N/A
+SEM_014,Frustracion_SLA_Soporte,El asesor tecnico cerro mi solicitud sin verificar si el error en el servidor habia quedado solucionado.,NEGATIVE,FRUSTRATION,customer_support,False,60,N/A
+SEM_015,Frustracion_SLA_Soporte,Llevo semanas esperando la reactivacion de mis credenciales y siguen ignorando mis correos de urgencia.,NEGATIVE,FRUSTRATION,customer_support,False,60,N/A
+SEM_016,Frustracion_SLA_Soporte,Atencion al cliente totalmente deficiente ningun agente asume responsabilidad por la falla en mi dashboard.,NEGATIVE,FRUSTRATION,customer_support,False,60,N/A
+SEM_017,Frustracion_SLA_Soporte,Cada vez que contacto a soporte me transfieren a otra persona y nadie resuelve el incidente critico.,NEGATIVE,FRUSTRATION,customer_support,False,60,N/A
+SEM_018,Frustracion_SLA_Soporte,El tiempo de demora para atender una emergencia en produccion supero las 48 horas sin explicacion.,NEGATIVE,FRUSTRATION,sla_delay,False,60,N/A
+SEM_019,Frustracion_SLA_Soporte,Pedi hablar con un supervisor de soporte y se negaron rotundamente a escalar el caso de fallo reiterado.,NEGATIVE,FRUSTRATION,customer_support,False,60,N/A
+SEM_020,Frustracion_SLA_Soporte,Soporte tecnico grosero y desatento dejaron el sistema inoperativo durante todo el fin de semana.,NEGATIVE,FRUSTRATION,customer_support,False,60,N/A
+SEM_021,Cobros_Facturacion_Friccion,Me aplicaron un sobrecargo duplicado en la tarjeta de credito sin ningun tipo de autorizacion previa.,NEGATIVE,FRUSTRATION,billing_pricing,False,55,N/A
+SEM_022,Cobros_Facturacion_Friccion,Aumento abusivo en la factura mensual que no corresponde con la tarifa contratada originalmente.,NEGATIVE,FRUSTRATION,billing_pricing,False,55,N/A
+SEM_023,Cobros_Facturacion_Friccion,Cobro indebido de un servicio adicional que nunca solicite ni configure en la plataforma.,NEGATIVE,FRUSTRATION,billing_pricing,False,55,N/A
+SEM_024,Cobros_Facturacion_Friccion,Factura con cobros ocultos e inconsistencias graves en el calculo de impuestos y renovacion.,NEGATIVE,FRUSTRATION,billing_pricing,False,55,N/A
+SEM_025,Cobros_Facturacion_Friccion,Llevo 2 meses solicitando el reembolso de un cobro erroneo y siguen dilatando el proceso de pago.,NEGATIVE,FRUSTRATION,billing_pricing,True,80,N/A
+SEM_026,Cobros_Facturacion_Friccion,Me debitaron el valor del plan anual cuando habia marcado expresamente la cancelacion de suscripcion.,NEGATIVE,FRUSTRATION,billing_pricing,True,85,N/A
+SEM_027,Cobros_Facturacion_Friccion,Inconsistencia total en el estado de cuenta: me cobran dos veces por el mismo usuario registrado.,NEGATIVE,FRUSTRATION,billing_pricing,False,55,N/A
+SEM_028,Cobros_Facturacion_Friccion,Aparece una penalidad economica injustificada por darme de baja antes de tiempo.,NEGATIVE,FRUSTRATION,billing_pricing,True,80,N/A
+SEM_029,Cobros_Facturacion_Friccion,El sistema sigue facturando de forma automatica a pesar de haber solicitado el cese de pagos.,NEGATIVE,FRUSTRATION,billing_pricing,True,85,N/A
+SEM_030,Cobros_Facturacion_Friccion,Bloquearon mi acceso por supuesto saldo pendiente cuando el comprobante de transferencia bancaria fue enviado a tiempo.,NEGATIVE,FRUSTRATION,billing_pricing,False,60,N/A

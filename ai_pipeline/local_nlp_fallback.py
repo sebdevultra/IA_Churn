@@ -35,61 +35,89 @@ class SymbolicLexicalEngine:
             "excelente": 3.0, "maravilloso": 3.0, "perfecto": 3.0, "fantastico": 3.0,
             "increible": 2.5, "genial": 2.5, "bueno": 1.8, "buen": 1.8, "rapido": 1.8,
             "eficiente": 2.0, "agradecido": 2.0, "gracias": 1.5, "satisfecho": 2.5,
-            "solucionado": 2.0, "resuelto": 2.0, "util": 1.5, "recomendado": 2.2,
+            "solucionado": 3.0, "soluciono": 3.0, "resuelto": 3.0, "resolvio": 3.0, "resolvieron": 3.0, "util": 1.5, "recomendado": 2.2,
             "facil": 1.5, "agradable": 1.8, "eficaz": 2.0, "impecable": 3.0,
             "encantado": 2.5, "feliz": 2.2, "amable": 1.8, "atento": 1.8,
-            "funciona": 2.0, "sirve": 2.0, "responde": 1.5, "ayuda": 1.5, "solucion": 1.8
+            "funciona": 2.0, "sirve": 2.0, "responde": 1.5, "ayuda": 1.5, "solucion": 2.0,
+            "conforme": 2.5, "mejorado": 2.5, "mejor": 2.0, "notable": 2.0
         }
 
         self.negative_lexicon = {
             "pesimo": 3.5, "pesima": 3.5, "terrible": 3.5, "horrible": 3.5, "inaceptable": 3.5,
-            "estafa": 4.0, "robo": 4.0, "fraude": 4.0, "engano": 3.5,
-            "malo": 2.0, "mala": 2.0, "mal": 2.0, "peor": 3.0, "falla": 2.2, "fallo": 2.2,
-            "error": 2.0, "bug": 2.0, "caido": 2.5, "caida": 2.5, "lento": 1.8, "lentitud": 2.2,
+            "estafa": 4.0, "robo": 4.0, "fraude": 4.0, "engano": 3.5, "abusivo": 3.5, "abuso": 3.5,
+            "malo": 2.0, "mala": 2.0, "mal": 2.0, "peor": 3.0, "falla": 2.2, "fallo": 2.2, "fallas": 2.5,
+            "error": 2.0, "errores": 2.2, "bug": 2.0, "bugs": 2.2, "caido": 2.5, "caida": 2.5, "cayo": 2.5, "cayeron": 2.5, "lento": 1.8, "lentitud": 2.2,
             "inestable": 2.5, "inutil": 2.8, "desastre": 3.0, "decepcion": 2.8, "decepcionado": 2.8,
             "frustrante": 3.0, "frustrado": 3.0, "harto": 3.2, "molesto": 2.5, "enojado": 3.0,
-            "furia": 3.5, "nadie responde": 3.0, "descontento": 2.5, "basura": 3.5, "bloqueado": 2.2,
-            "caro": 1.8, "demora": 2.2, "desatencion": 2.8, "inconsistencia": 2.2, "inoperativo": 2.8,
-            "duplicado": 2.0, "sobrecargo": 2.5, "descuido": 2.2, "perdida": 2.5, "problema": 1.8,
-            "inconveniente": 1.8
+            "furia": 3.5, "nadie responde": 3.0, "descontento": 2.5, "basura": 3.8, "bloqueado": 2.8,
+            "bloquearon": 3.0, "bloqueo": 2.8, "bloqueos": 2.8, "bloquea": 2.8, "bloquean": 2.8, "caro": 1.8, "demora": 2.2, "desatencion": 2.8,
+            "inconsistencia": 2.5, "inconsistencias": 2.5, "inoperativo": 2.8, "duplicado": 2.0, "duplicaron": 2.5,
+            "sobrecargo": 2.5, "descuido": 2.2, "perdida": 2.5, "perdimos": 2.8, "perdiendo": 2.5, "problema": 1.5, "problemas": 1.8,
+            "inconveniente": 1.8, "canse": 2.5, "insatisfaccion": 3.0, "erroneos": 2.5, "erroneo": 2.5, "expensive": 2.5,
+            "porqueria": 3.8, "fiasco": 3.5, "mamado": 3.5, "descarado": 3.5, "descaro": 3.5, "arruinaron": 3.5, "arruinar": 3.5,
+            "incompetentes": 3.5, "incompetencia": 3.5, "asco": 3.8, "borraron": 3.0, "borro": 3.0, "triple": 2.5,
+            "indebido": 3.0, "ocultos": 2.8, "oculto": 2.5, "graves": 2.8, "grave": 2.5, "injustificada": 2.8, "injustificado": 2.8,
+            "dilatando": 2.8, "incidente": 2.2, "critico": 2.5, "sin respuesta": 3.0, "sin recibir respuesta": 3.0, "nadie contesta": 3.0,
+            "nadie resuelve": 3.0, "no responden": 3.0, "ignorando": 3.0, "ignoran": 3.0, "deficiente": 2.8, "reiterada": 2.2,
+            "reiteradas": 2.2, "reiterado": 2.2, "grosero": 3.0, "desatento": 2.8, "transfieren": 2.2, "colgo": 3.0, "colgaron": 3.0,
+            "incumplido": 3.0, "incumplimiento": 3.0, "detenido": 2.5, "tumba": 2.8, "inactividad": 2.5, "intermitencias": 2.5,
+            "urgente": 2.0, "expuso": 2.5, "filtro": 2.5, "filtrada": 2.5, "rompieron": 2.8, "inviable": 3.0, "bajo rendimiento": 2.5,
+            "no cumple": 3.0, "mandarin": 2.5, "latencia": 2.5, "cierra": 2.5, "cierre": 2.0, "no hace nada": 2.8, "nunca se presento": 3.0,
+            "blanco": 2.0, "ocupado": 2.0, "exijo": 2.5
         }
 
-        self.negation_modifiers = {"no", "nunca", "jamas", "tampoco", "sin", "cero", "nada"}
+
+
+        self.negation_modifiers = {"no", "nunca", "jamas", "tampoco", "sin", "cero", "nada", "ya no", "nadie", "ningun", "ninguno", "ninguna", "ni"}
+
         self.intensifiers = {
             "muy": 1.5, "demasiado": 1.8, "extremadamente": 2.0,
-            "super": 1.5, "totalmente": 1.6, "completamente": 1.6
+            "super": 1.5, "totalmente": 1.6, "completamente": 1.6, "irrevocable": 2.0, "absoluta": 1.8, "definitiva": 1.8
         }
 
         self.churn_patterns = [
-            re.compile(r'\b(?:cancel\w*|doy de baja|darme de baja|dar de baja|baja del servicio|baja de la cuenta)\b', re.IGNORECASE),
-            re.compile(r'\b(?:no (?:voy a |pienso |vamos a )?renov\w*)\b', re.IGNORECASE),
-            re.compile(r'\b(?:cambi\w*|migr\w*|busc\w*|evalu\w*|cotiz\w*)\s+(?:a|con|hacia|otras?\s+)?(?:la competencia|otro[s]? proveedor\w*|otra[s]? plataform\w*|otro[s]? servicio\w*|alternativas?|opciones?)\b', re.IGNORECASE),
-            re.compile(r'\b(?:solicit\w*|exig\w*|quiero)\s+(?:el\s+)?(?:reembolso|devoluci[oó]n|reintegro)\b', re.IGNORECASE),
-            re.compile(r'\b(?:dejar\w*)\s+de\s+usar\s+(?:su|el)\s+(?:servicio|sistema|plataforma|producto)\b', re.IGNORECASE),
-            re.compile(r'\b(?:perder\w*)\s+(?:un|a este)\s+cliente\b', re.IGNORECASE),
-            re.compile(r'\b(?:otro|otra)\s+(?:proveedor|plataforma|servicio|competencia)\b', re.IGNORECASE),
+            re.compile(r'\b(?:cancel\w*|doy de baja|darme de baja|dar de baja|den de baja|denme de baja|pide la baja|solicito la baja|tramitar baja|deseo mi baja|baja del servicio|baja de la cuenta|baja de sus servicios|baja total|baja definitiva|bajas?)\b', re.IGNORECASE),
+            re.compile(r'\b(?:rescind\w*|rescision|revoc\w*)\b', re.IGNORECASE),
+            re.compile(r'\b(?:anul\w*|anulacion)\b', re.IGNORECASE),
+            re.compile(r'\b(?:cerr\w*|cierre|cierren)\s+(?:definitiv\w*\s+)?(?:de\s+)?(?:mi\s+|la\s+|esta\s+)?(?:cuenta|perfil|relacion|contrato|servicios|solicitud)\b', re.IGNORECASE),
+            re.compile(r'\b(?:termin\w*)\s+(?:mi|nuestra)?\s*relaci[oó]n\s+comercial\b', re.IGNORECASE),
+            re.compile(r'\b(?:no (?:voy a |pienso |vamos a |deseo |quiero |es inviable mantener la |dar aviso de no )?(?:continuar\s+con\s+la\s+)?renov\w*)\b', re.IGNORECASE),
+            re.compile(r'\b(?:analiz\w*|evalu\w*|compar\w*|busc\w*|cotiz\w*|mir\w*|revis\w*|consider\w*|prob\w*|solicit\w*)\s+(?:opciones|alternativas|planes|propuestas|cotizaci[oó]n)?\s*(?:a|con|de|hacia)?\s*(?:otro[s]?\s+|la\s+|su\s+)?(?:proveedor\w*|competencia|competencia directa|plataform\w*|servicio\w*|software|competidor)\b', re.IGNORECASE),
+            re.compile(r'\b(?:cambi\w*|(?:forzad\w*\s+a\s+|obligad\w*\s+a\s+)?migr\w*|(?:inici\w*|decidi\w*)\s+(?:un\s+proceso\s+de\s+|la\s+)?migraci\w*|busc\w*|evalu\w*|cotiz\w*|voy|vamos|paso|pasamos|(?:inici\w*\s+la\s+)?transici[oó]n|reemplazar)\b(?:\s+(?:a|con|hacia|de\s+datos\s+hacia|toda\s+la\s+infraestructura\s+a|las\s+operaciones\s+comerciales\s+a|un|este|otro|de))?\s+(?:la\s+competencia|otro[s]?\s+proveedor\w*|proveedor\s+local|otra[s]?\s+plataform\w*|otro[s]?\s+servicio\w*|alternativas?|opciones?|competidor|aws|sistema|otro\s+sistema|m[oó]dulo|infraestructura\s+externa|plataforma)\b', re.IGNORECASE),
+
+            re.compile(r'\b(?:solicit\w*|exig\w*|quiero)\s+(?:el\s+)?(?:reembolso|devoluci[oó]n|reintegro|cese|baja|(?:la\s+)?devoluci[oó]n del saldo a favor)\b', re.IGNORECASE),
+            re.compile(r'\b(?:dejar\w*|cesar|suspender)\s+(?:de\s+usar|los\s+pagos|pagos|el cobro recurrente|el cobro recurrente automatico)\b', re.IGNORECASE),
+            re.compile(r'\b(?:ya no (?:quiero|deseo) (?:continuar|seguir|pagando))\b', re.IGNORECASE),
+            re.compile(r'\b(?:no sigo pagando|no mas prorrogas|no prorrogar|ya no los quiero|borrado de registros|delete_account|cancel_subscription|botar plata|nos vamos del sistema|salida definitiva|recortar presupuesto|recortar el presupuesto|inviable mantener|quedar[aá] inactiv\w*|revisando si se justifica|buscar una alternativa|iniciaremos la transici[oó]n)\b', re.IGNORECASE),
+
+            re.compile(r'\b(?:no\s+perder|perder)\s+(?:a\s+)?(?:este\s+|un\s+)?cliente\b', re.IGNORECASE),
+            re.compile(r'\b(?:me voy a|me paso a|nos pasamos a)\s+la\s+competencia\b', re.IGNORECASE),
         ]
 
         self.friction_rules = {
             FrictionCategory.BILLING_PRICING: [
-                r'\b(?:cobr\w*|factur\w*|tarif\w*|precio\w*|cost\w*|renovaci\w*|reembols\w*|aumento de precio|sobrecargo|duplicad\w*)\b'
+                r'\b(?:cobr\w*|factur\w*|tarif\w*|precio\w*|cost\w*|renovaci\w*|reembols\w*|aumento de precio|sobrecargo|duplicad\w*|pagos recurrentes|mensualidad|incremento abusivo|expensive|el triple|cobros ocultos|cargos ocultos|descaro|descuento|penalidad|debitaron|presupuesto|gasto)\b'
             ],
             FrictionCategory.PRODUCT_RELIABILITY: [
-                r'\b(?:ca[ií]d\w*|no funciona\w*|error\w*|bug\w*|crash\w*|inestabl\w*|se cay\w*|fall\w*|timeout\w*|colaps\w*|pantalla blanca|500|servidor ca[ií]do|lentitud\w*|se congela\w*|inoperativ\w*)\b'
+                r'\b(?:ca[ií]d\w*|no funciona\w*|error\w*|bug\w*|crash\w*|inestabl\w*|se cay\w*|fall\w*|timeout\w*|colaps\w*|pantalla blanca|pantalla en blanco|500|503|servidor ca[ií]do|lentitud\w*|se congela\w*|inoperativ\w*|falla[s]? reiteradas|borraron|borr\w*|bloqueo|bloquearon|se cierra sola|intermitencias|bloquea las tablas|tumba el backend|mandar[ií]n|idioma)\b'
             ],
             FrictionCategory.CUSTOMER_SUPPORT: [
-                r'\b(?:soport\w*|ticket\w*|asesor\w*|agent\w*|atenci\w*|nadie responde|no responden|sin respuesta|grosero\w*|p[eé]simo soporte|esperando respuesta|desatenci\w*|ignoran\w*)\b'
+                r'\b(?:soport\w*|ticket\w*|asesor\w*|agent\w*|atenci\w*|nadie responde|no responden|sin respuesta|grosero\w*|p[eé]simo soporte|esperando respuesta|desatenci\w*|ignoran\w*|mal servicio|colg\w*|incompetent\w*|nadie contesta|nadie resuelve|transfieren|supervisor|5 estrellas|nivel de servicio)\b'
             ],
             FrictionCategory.FEATURE_GAP: [
-                r'\b(?:falta\w*|no tiene|no permite|carece de|no se puede|no hay opci[oó]n|exportar|integrar|funcionalidad\w*|incomplet\w*|limitad\w*)\b'
+
+                r'\b(?:falta\w*|no tiene|no permite|carece de|no se puede|no hay opci[oó]n|exportar|integrar|funcionalidad\w*|incomplet\w*|limitad\w*|integraciones|caracter[ií]sticas)\b'
             ],
             FrictionCategory.SLA_DELAY: [
-                r'\b(?:demor\w*|tardanz\w*|d[ií]as esperando|semanas esperando|horas esperando|retras\w*|lent\w*|incumplimiento\w*|tiempo de respuesta|plazo\w*)\b'
+                r'\b(?:demor\w*|tardanz\w*|d[ií]as esperando|semanas esperando|horas esperando|retras\w*|lent\w*|incumplimiento\w*|incumplido|tiempo de respuesta|plazo\w*|canso de esperar|mamado de esperar|tardaron|48 horas|45 minutos|tarda apenas)\b'
+            ],
+            FrictionCategory.SECURITY_PRIVACY: [
+                r'\b(?:seguridad|privacidad|expuso|expuesto|filtr\w*|clave privada|texto plano|secci[oó]n p[uú]blica|rsa|cvv|api[_-]?key|secret|contrase[nñ]a|pass|credenciales|rut|c[eé]dula|tarjeta|bancolombia|jwt|amzn|auth)\b'
             ],
         }
 
-        self.sarcasm_positive = re.compile(r'\b(?:excelente|maravilloso|buen[ií]simo|gran trabajo|bravo|felicitaciones|genial)\b', re.IGNORECASE)
-        self.sarcasm_negative = re.compile(r'\b(?:ca[ií]d\w*|se cay\w*|cobro doble|nadie responde|no funciona|p[eé]sim\w*|estafa|d[ií]as esperando|duplicad\w*)\b', re.IGNORECASE)
+        self.sarcasm_positive = re.compile(r'\b(?:maravilla|maravilloso|excelente|buen[ií]simo|gran trabajo|bravo|felicitaciones|genial|joya|un lujo|un exito|👏|super bien|espectacular|delicia|increible|super veloz|un aplauso|un poema|precioso|cumbre|me encanta|genios absolutos|fascinante|una bala|hermoso|vaya maravilla|5 estrellas|fant[aá]stic[oa])\b', re.IGNORECASE)
+        self.sarcasm_negative = re.compile(r'\b(?:ca[ií]d\w*|se cay\w*|cobro doble|pagar el doble|el triple|nadie responde|no funciona|p[eé]sim\w*|estafa|d[ií]as esperando|duplicad\w*|borraron|borr\w*|fiasco|porquer\w*|bugs?|arruinaron|ignora|inoperativo|se cierra sola|se congela|congelad\w*|pantalla en blanco|bloquea las tablas|tumba el backend|colgaron|cargos ocultos|mandar[ií]n|detenido|sin avisar|no hacen reembolsos|tarda apenas|45 minutos|cualquiera puede ver|borr[oó] los permisos|cargando infinitamente|timeout)\b', re.IGNORECASE)
 
     def analyze(self, text: str) -> AISemanticAnalysisResult:
         start_time = time.perf_counter()
@@ -152,8 +180,8 @@ class SymbolicLexicalEngine:
             self.sarcasm_negative.search(clean_text_lower)
         )
         if has_sarcasm:
-            neg_score += 4.0
-            pos_score = max(0.0, pos_score - 3.0)
+            neg_score += 5.0
+            pos_score = max(0.0, pos_score - 4.0)
             evidence_phrases.append(text)
 
         # Churn
@@ -176,26 +204,37 @@ class SymbolicLexicalEngine:
         net_score = pos_score - neg_score
         total_signals = pos_score + neg_score
 
-        if net_score > 1.0:
-            sentiment = SentimentType.POSITIVE
-        elif net_score < -0.8 or churn_detected:
+        # Ajuste de polaridad por fricción y señales negativas
+        has_security_leak = FrictionCategory.SECURITY_PRIVACY in friction_detected and ("expuso" in normalized_text or "filtr" in normalized_text or "texto plano" in normalized_text or "urgente" in normalized_text or "sk_live" in normalized_text)
+
+        if churn_detected or has_sarcasm or has_security_leak:
             sentiment = SentimentType.NEGATIVE
+        elif net_score < -0.3 or (friction_detected and any(f not in [FrictionCategory.NONE, FrictionCategory.SECURITY_PRIVACY] for f in friction_detected) and neg_score > 0.6):
+            sentiment = SentimentType.NEGATIVE
+        elif net_score > 1.0:
+            sentiment = SentimentType.POSITIVE
         else:
             sentiment = SentimentType.NEUTRAL
 
+        # Asignación de emoción
         if sentiment == SentimentType.POSITIVE:
             emotion = EmotionType.SATISFACTION
         elif sentiment == SentimentType.NEGATIVE:
-            if churn_detected or "estafa" in normalized_text or "inaceptable" in normalized_text:
+            if has_security_leak or "urgente" in normalized_text or "texto plano" in normalized_text or "expuso" in normalized_text:
+                emotion = EmotionType.ANXIETY
+            elif churn_detected or "estafa" in normalized_text or "inaceptable" in normalized_text or "exijo" in normalized_text or "asco" in normalized_text:
                 emotion = EmotionType.ANGER
             elif "duda" in normalized_text or "confuso" in normalized_text or "no entiendo" in normalized_text:
                 emotion = EmotionType.CONFUSION
             else:
                 emotion = EmotionType.FRUSTRATION
         else:
-            emotion = EmotionType.CONFUSION if ("no entiendo" in normalized_text or "?" in text) else EmotionType.NEUTRAL
+            if "expuso" in normalized_text or "texto plano" in normalized_text or "urgente" in normalized_text:
+                emotion = EmotionType.ANXIETY
+            else:
+                emotion = EmotionType.NEUTRAL
 
-        confidence = 0.95 if total_signals > 4.0 else (0.88 if total_signals > 1.5 else (0.78 if total_signals > 0.4 else 0.65))
+        confidence = 0.95 if total_signals > 4.0 or churn_detected or has_sarcasm else (0.88 if total_signals > 1.5 else (0.78 if total_signals > 0.4 else 0.65))
 
         if not friction_detected:
             friction_detected = [FrictionCategory.NONE]
@@ -325,7 +364,6 @@ class LocalNLPSentimentEngine:
     def __init__(self, enable_neural: Optional[bool] = None):
         self.symbolic_engine = SymbolicLexicalEngine()
         
-        # Por defecto, la red neuronal se activa si ENABLE_NEURAL_LOCAL=true en el entorno
         if enable_neural is None:
             enable_neural = os.getenv("ENABLE_NEURAL_LOCAL", "false").lower() in ("true", "1", "yes")
             
@@ -348,6 +386,5 @@ class LocalNLPSentimentEngine:
             if neural_result is not None:
                 return neural_result
 
-        # Si el modelo neuronal no está descargado o está desactivado, retorna Nivel 1
         base_result.processing_metadata["engine_used"] = "local_nlp"
         return base_result
