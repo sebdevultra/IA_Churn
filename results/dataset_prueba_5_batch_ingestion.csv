@@ -1,0 +1,110 @@
+ID,Cliente_ID,Canal,Tier,Mensaje_Cliente,Es_Duplicado,Es_Corrupto
+BATCH_001,CUST-1001,support_ticket,Enterprise,"Excelente servicio y rapidez en la respuesta del asesor.",False,False
+BATCH_002,CUST-1002,chat,Standard,"No puedo acceder a mi panel desde ayer, me da error 500.",False,False
+BATCH_003,CUST-1003,review,Enterprise,"Estamos evaluando cancelar la suscripción por caídas continuas.",False,False
+BATCH_004,CUST-1004,nps_survey,Standard,"Todo muy bien, me gusta la facilidad de uso.",False,False
+BATCH_005,CUST-1005,support_ticket,Enterprise,"Soy Juan Gómez Cédula 102030, cobraron el doble en la factura.",False,False
+BATCH_006,CUST-1006,chat,Standard,"¿Cómo puedo exportar mis datos a un archivo CSV?",False,False
+BATCH_007,CUST-1007,support_ticket,Enterprise,"El equipo directivo ordenó suspender el cobro recurrente automático.",False,False
+BATCH_008,CUST-1008,review,Standard,"Una porquería de soporte, me colgaron la llamada.",False,False
+BATCH_009,CUST-1009,support_ticket,Enterprise,"La sincronización de la API falló durante el cierre de ventas.",False,False
+BATCH_010,CUST-1010,nps_survey,Standard,"Muy satisfecho con la atención brindada por el equipo.",False,False
+BATCH_001,CUST-1001,support_ticket,Enterprise,"Excelente servicio y rapidez en la respuesta del asesor.",True,False
+BATCH_011,CUST-1011,support_ticket,Enterprise,"Si no aumentan el límite de consultas, migraremos a AWS.",False,False
+BATCH_012,CUST-1012,chat,Standard,"Muchas gracias por solucionar el inconveniente tan rápido.",False,False
+BATCH_013,CUST-1013,review,Enterprise,"Una maravilla su sistema... borró los datos y nadie responde.",False,False
+BATCH_014,CUST-1014,support_ticket,Standard,"Cargo indebido en mi tarjeta de crédito 4532... favor reembolsar.",False,False
+BATCH_015,CUST-1015,nps_survey,Enterprise,"La plataforma es muy estable y rápida, gran trabajo.",False,False
+BATCH_016,CUST-1016,chat,Standard,"Llevo 3 días esperando respuesta sobre mi solicitud de clave.",False,False
+BATCH_017,CUST-1017,support_ticket,Enterprise,"Iniciaremos la transición a otro software este fin de semana.",False,False
+BATCH_018,CUST-1018,review,Standard,"Excelente aplicación, muy recomendada para empresas.",False,False
+BATCH_019,CUST-1019,support_ticket,Enterprise,"El asesor asignado no asistió a la reunión de seguimiento.",False,False
+BATCH_020,CUST-1020,chat,Standard,"Mi clave privada es admin123 y mi teléfono es 3001112233.",False,False
+BATCH_005,CUST-1005,support_ticket,Enterprise,"Soy Juan Gómez Cédula 102030, cobraron el doble en la factura.",True,False
+BATCH_021,CUST-1021,support_ticket,Enterprise,"Pedimos revocar el contrato firmado debido al bajo rendimiento.",False,False
+BATCH_022,CUST-1022,nps_survey,Standard,"El sistema funciona de maravilla, felicitaciones.",False,False
+BATCH_023,CUST-1023,chat,Enterprise,"La base de datos se bloquea cada vez que hacemos consultas.",False,False
+BATCH_024,CUST-1024,review,Standard,"Pésimo servicio al cliente, nadie se hace responsable del fallo.",False,False
+BATCH_025,CUST-1025,support_ticket,Enterprise,"Exigimos la devolución del saldo a favor; migramos a otra app.",False,False
+BATCH_026,CUST-1026,chat,Standard,"Buenas tardes, quería consultar sobre los planes de pago.",False,False
+BATCH_027,CUST-1027,support_ticket,Enterprise,"Filtraron el token de producción eyJhb... en la sección pública.",False,False
+BATCH_028,CUST-1028,nps_survey,Standard,"La interfaz es intuitiva y fácil de usar.",False,False
+BATCH_029,CUST-1029,review,Enterprise,"Nos vemos forzados a buscar otra alternativa en el mercado.",False,False
+BATCH_030,CUST-1030,chat,Standard,"La app se cierra sola cada vez que intento abrir el perfil.",False,False
+BATCH_011,CUST-1011,support_ticket,Enterprise,"Si no aumentan el límite de consultas, migraremos a AWS.",True,False
+BATCH_031,CUST-1031,support_ticket,Enterprise,"Aumento abusivo en la factura mensual sin notificación previa.",False,False
+BATCH_032,CUST-1032,chat,Standard,"Todo quedó resuelto de manera impecable, gracias.",False,False
+BATCH_033,CUST-1033,review,Enterprise,"El departamento de compras ya está evaluando a la competencia.",False,False
+BATCH_034,CUST-1034,support_ticket,Standard,"Demora de más de 48 horas para atender un ticket urgente.",False,False
+BATCH_035,CUST-1035,nps_survey,Enterprise,"Gran soporte técnico y excelente estabilidad.",False,False
+BATCH_036,CUST-1036,chat,Standard,"¿Tienen algún teléfono donde pueda comunicarme con un asesor?",False,False
+BATCH_037,CUST-1037,support_ticket,Enterprise,"Ya construimos un módulo interno para reemplazar este sistema.",False,False
+BATCH_038,CUST-1038,review,Standard,"Me debitaron dos veces la mensualidad en la cuenta bancaria.",False,False
+BATCH_039,CUST-1039,support_ticket,Enterprise,"El tiempo de inactividad superó el límite acordado en el SLA.",False,False
+BATCH_040,CUST-1040,nps_survey,Standard,"Muy contento con las nuevas funciones de la versión 2.0.",False,False
+BATCH_017,CUST-1017,support_ticket,Enterprise,"Iniciaremos la transición a otro software este fin de semana.",True,False
+BATCH_041,CUST-1041,chat,Enterprise,"Por favor envíen la confirmación de cancelación de suscripción.",False,False
+BATCH_042,CUST-1042,support_ticket,Standard,"No me llega el correo de restablecimiento de contraseña.",False,False
+BATCH_043,CUST-1043,review,Enterprise,"Hermoso servicio... borraron los permisos y no dan soporte.",False,False
+BATCH_044,CUST-1044,nps_survey,Standard,"Atención rápida, amable y eficiente.",False,False
+BATCH_045,CUST-1045,support_ticket,Enterprise,"Solicito formalmente la baja total de nuestros 50 usuarios corporativos.",False,False
+BATCH_046,CUST-1046,chat,Standard,"Esta aplicación es una pérdida de tiempo, no sirve para nada.",False,False
+BATCH_047,CUST-1047,review,Enterprise,"La latencia de respuesta empeoró drásticamente esta semana.",False,False
+BATCH_048,CUST-1048,support_ticket,Standard,"Mi nombre es Carlos Ruiz, confirmo mi dirección en Cra 45 # 12.",False,False
+BATCH_049,CUST-1049,nps_survey,Enterprise,"Excelente herramienta, optimizó todos nuestros procesos.",False,False
+BATCH_050,CUST-1050,chat,Enterprise,"Daremos aviso de no renovación en el próximo ciclo comercial.",False,False
+BATCH_025,CUST-1025,support_ticket,Enterprise,"Exigimos la devolución del saldo a favor; migramos a otra app.",True,False
+BATCH_051,CUST-1051,support_ticket,Standard,"El botón de descargar reporte no funciona en Chrome.",False,False
+BATCH_052,CUST-1052,review,Enterprise,"Genios absolutos, cobraron el triple en la factura de pruebas.",False,False
+BATCH_053,CUST-1053,chat,Standard,"Muchas gracias por la pronta solución.",False,False
+BATCH_054,CUST-1054,support_ticket,Enterprise,"La junta directiva decidió recortar presupuesto en esta herramienta.",False,False
+BATCH_055,CUST-1055,nps_survey,Standard,"Excelente atención al cliente, felicitaciones.",False,False
+BATCH_056,CUST-1056,chat,Enterprise,"El servidor estuvo inoperativo durante todo el fin de semana.",False,False
+BATCH_057,CUST-1057,support_ticket,Standard,"Cobro no autorizado en mi tarjeta Visa terminada en 8899.",False,False
+BATCH_058,CUST-1058,review,Enterprise,"Estamos programando la salida definitiva de la plataforma.",False,False
+BATCH_059,CUST-1059,chat,Standard,"Hola, ¿dónde puedo ver mi historial de transacciones?",False,False
+BATCH_060,CUST-1060,nps_survey,Enterprise,"Muy conformes con el rendimiento y soporte de la plataforma.",False,False
+BATCH_037,CUST-1037,support_ticket,Enterprise,"Ya construimos un módulo interno para reemplazar este sistema.",True,False
+BATCH_061,CUST-1061,support_ticket,Enterprise,"Pedimos tramitar la baja del servicio para evitar prórrogas automáticas.",False,False
+BATCH_062,CUST-1062,chat,Standard,"La aplicación es súper rápida, me encanta.",False,False
+BATCH_063,CUST-1063,review,Enterprise,"Qué seguridad tan impecable, expusieron datos de clientes.",False,False
+BATCH_064,CUST-1064,support_ticket,Standard,"Nadie contesta en el chat de soporte, pésimo servicio.",False,False
+BATCH_065,CUST-1065,nps_survey,Enterprise,"Plataforma 100% recomendada para gestión corporativa.",False,False
+BATCH_066,CUST-1066,chat,Enterprise,"El mes que viene nos pasamos a la competencia sin falta.",False,False
+BATCH_067,CUST-1067,support_ticket,Standard,"Soy María con Cédula 304050, cuenta de ahorros 987654321.",False,False
+BATCH_068,CUST-1068,review,Enterprise,"El sistema borró los registros de auditoría de la semana.",False,False
+BATCH_069,CUST-1069,chat,Standard,"Resuelto el problema con el inicio de sesión, gracias.",False,False
+BATCH_070,CUST-1070,nps_survey,Enterprise,"Estamos evaluando cotizaciones con otros proveedores.",False,False
+BATCH_045,CUST-1045,support_ticket,Enterprise,"Solicito formalmente la baja total de nuestros 50 usuarios corporativos.",True,False
+BATCH_071,CUST-1071,support_ticket,Standard,"Me aparece una penalidad injustificada por cancelar el plan.",False,False
+BATCH_072,CUST-1072,chat,Enterprise,"La nueva actualización rompió las integraciones de producción.",False,False
+BATCH_073,CUST-1073,review,Standard,"Excelente soporte, el agente fue muy amable y atento.",False,False
+BATCH_074,CUST-1074,nps_survey,Enterprise,"Cierren nuestra cuenta corporativa de forma definitiva.",False,False
+BATCH_075,CUST-1075,support_ticket,Standard,"Inconsistencia en el total facturado del mes de julio.",False,False
+BATCH_076,CUST-1076,chat,Enterprise,"El tiempo de respuesta de la API es inaceptable.",False,False
+BATCH_077,CUST-1077,review,Standard,"Servicio muy rápido y eficaz, satisfecho con la compra.",False,False
+BATCH_078,CUST-1078,support_ticket,Enterprise,"Por favor suspender el cobro recurrente para no perder este cliente.",False,False
+BATCH_079,CUST-1079,nps_survey,Standard,"No entiendo la navegación del nuevo dashboard.",False,False
+BATCH_080,CUST-1080,chat,Enterprise,"Exigimos el reintegro total del dinero pagado por adelantado.",False,False
+BATCH_066,CUST-1066,chat,Enterprise,"El mes que viene nos pasamos a la competencia sin falta.",True,False
+BATCH_081,CUST-1081,support_ticket,Standard,"El asesor técnico me atendió con grosería y desatención.",False,False
+BATCH_082,CUST-1082,review,Enterprise,"La plataforma colapsó en pleno lanzamiento comercial.",False,False
+BATCH_083,CUST-1083,chat,Standard,"Todo funciona perfecto, muchas gracias.",False,False
+BATCH_084,CUST-1084,nps_survey,Enterprise,"No vemos retorno de inversión claro con tantas caídas.",False,False
+BATCH_085,CUST-1085,support_ticket,Standard,"Mi clave es TempPass123$ y mi usuario es usr_998877.",False,False
+BATCH_086,CUST-1086,chat,Enterprise,"Iniciaremos la migración de datos hacia una infraestructura externa.",False,False
+BATCH_087,CUST-1087,review,Standard,"Muy buen producto, fácil de integrar y muy seguro.",False,False
+BATCH_088,CUST-1088,support_ticket,Enterprise,"El soporte técnico ignora nuestros correos de alta prioridad.",False,False
+BATCH_089,CUST-1089,nps_survey,Standard,"Me encanta la velocidad y el diseño del sistema.",False,False
+BATCH_090,CUST-1090,chat,Enterprise,"Solicitamos no renovar la suscripción al finalizar el trimestre.",False,False
+BATCH_074,CUST-1074,nps_survey,Enterprise,"Cierren nuestra cuenta corporativa de forma definitiva.",True,False
+BATCH_091,CUST-1091,support_ticket,Standard,"El sistema sigue cobrando a pesar de haber dado de baja la cuenta.",False,False
+BATCH_092,CUST-1092,review,Enterprise,"Vaya maravilla de cobro duplicado en la tarjeta corporativa.",False,False
+BATCH_093,CUST-1093,chat,Standard,"Resuelto en menos de 5 minutos, excelente.",False,False
+BATCH_094,CUST-1094,support_ticket,Enterprise,"La junta directiva autorizó rescindir el contrato inmediatamente.",False,False
+BATCH_095,CUST-1095,nps_survey,Standard,"Todo muy claro y sin complicaciones.",False,False
+BATCH_096,CUST-1096,chat,Enterprise,"El servicio es inestable y no cumple con los estándares empresariales.",False,False
+BATCH_097,CUST-1097,review,Standard,"Atención pésima, me dejaron esperando 30 minutos.",False,False
+BATCH_098,CUST-1098,support_ticket,Enterprise,"Nos pasamos a la competencia a partir del próximo mes.",False,False
+BATCH_099,CUST-1099,chat,Standard,"Excelente servicio, muchas gracias por todo.",False,False
+BATCH_100,CUST-1100,nps_survey,Enterprise,"Daremos de baja el servicio definitivamente por falta de soporte.",False,False

@@ -1,0 +1,42 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Pytest / Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Environments
+.env
+.env.local
+.venv/
+env/
+venv/
+ENV/
+
+# VS Code / IDE settings
+.vscode/
+.idea/
+
+# Database files
+*.sqlite3
+*.db
+*.db-shm
+*.db-wal
+churn_monitor.db*
+
+# Compressed Archives & Large Datasets
+*.rar
+*.zip
+data/dataset_1m_interactions.csv
+
+# Backend local environments
+backend/.env
+backend/.env.local
+
+# Temporary / Scratch
+tmp/
+scratch/
+mock_output/

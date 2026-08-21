@@ -1,0 +1,6 @@
+customer_external_id,source_type,content,external_reference_id
+CUST-1001,support_ticket,"Se volvió a caer la base de datos durante el pico de tráfico. Si el soporte no responde cancelaremos el servicio.",TICK-CSV-01
+CUST-1002,review,"Todo perfecto con el onboarding y la integración de webhooks.",REV-CSV-02
+CUST-1005,support_ticket,"El cobro de la tarjeta de crédito falló tres veces y nos bloquearon el acceso injustamente.",TICK-CSV-03
+CUST-1008,chat,"Hola, tengo una consulta general sobre cómo exportar reportes en formato PDF.",CHAT-CSV-04
+CUST-1003,survey,"La estabilidad del sistema ha sido muy deficiente las últimas dos semanas.",NPS-CSV-05

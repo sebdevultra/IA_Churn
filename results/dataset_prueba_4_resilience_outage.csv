@@ -1,0 +1,31 @@
+ID,Tipo_Fallo_Simulado,Cliente_Tier,Texto_Entrada,Sentimiento_Esperado,Friccion_Esperada,Churn_Intent,Comportamiento_Esperado
+OUT_001,CLOUD_TIMEOUT_2500MS,Enterprise,"Exigimos la cancelación inmediata de la cuenta corporativa por las fallas reiteradas.",NEGATIVE,product_reliability,True,Fallback local instantáneo sin error 500
+OUT_002,HTTP_503_SERVICE_UNAVAILABLE,Enterprise,"Una maravilla su sistema... cobraron el triple y nadie responde los tickets.",NEGATIVE,billing_pricing,False,Conmutación a local L1/L2 en < 2ms
+OUT_003,HTTP_429_RATE_LIMIT,Enterprise,"Estamos evaluando rescindir el contrato anual y migrar a la competencia.",NEGATIVE,billing_pricing,True,Fallback activo con metadatos de contingencia
+OUT_004,MALFORMED_JSON_CORRUPTION,Standard,"Pésimo servicio, la app se cierra sola en iOS y Android.",NEGATIVE,product_reliability,False,Recuperación determinista con motor local
+OUT_005,NETWORK_SOCKET_DISCONNECT,Enterprise,"El servidor de producción se cayó en plena auditoría, exijo hablar con gerencia.",NEGATIVE,product_reliability,False,Procesamiento local 100% garantizado
+OUT_006,CLOUD_TIMEOUT_2500MS,Standard,"Llevo 5 días esperando que me reactiven el usuario bloqueado.",NEGATIVE,customer_support,False,Fallback local instantáneo sin error 500
+OUT_007,HTTP_503_SERVICE_UNAVAILABLE,Enterprise,"Iniciaremos la transición a otro proveedor si no corrigen el tiempo de respuesta.",NEGATIVE,customer_support,True,Conmutación a local L1/L2 en < 2ms
+OUT_008,HTTP_429_RATE_LIMIT,Standard,"Me aplicaron un sobrecargo duplicado en la tarjeta de crédito.",NEGATIVE,billing_pricing,False,Fallback activo con metadatos de contingencia
+OUT_009,MALFORMED_JSON_CORRUPTION,Enterprise,"El departamento de compras determinó no renovar la suscripción anual.",NEGATIVE,billing_pricing,True,Recuperación determinista con motor local
+OUT_010,NETWORK_SOCKET_DISCONNECT,Standard,"Esta vaina es una porquería, me cansé de perder plata y cancelo mi plan.",NEGATIVE,product_reliability,True,Procesamiento local 100% garantizado
+OUT_011,CLOUD_TIMEOUT_2500MS,Enterprise,"El asesor asignado nos colgó la llamada tras 2 horas de espera.",NEGATIVE,customer_support,False,Fallback local instantáneo sin error 500
+OUT_012,HTTP_503_SERVICE_UNAVAILABLE,Standard,"Aparece un cobro oculto por 'soporte prioritario' que nunca autoricé.",NEGATIVE,billing_pricing,False,Conmutación a local L1/L2 en < 2ms
+OUT_013,HTTP_429_RATE_LIMIT,Enterprise,"Ya solicitamos cotización a su competidor directo para migrar la base de datos.",NEGATIVE,product_reliability,True,Fallback activo con metadatos de contingencia
+OUT_014,MALFORMED_JSON_CORRUPTION,Standard,"Excelente soporte de Carlos, resolvió mi problema en 2 minutos.",POSITIVE,none,False,Recuperación determinista con motor local
+OUT_015,NETWORK_SOCKET_DISCONNECT,Enterprise,"La junta directiva ordenó suspender el cobro recurrente automático.",NEGATIVE,billing_pricing,True,Procesamiento local 100% garantizado
+OUT_016,CLOUD_TIMEOUT_2500MS,Standard,"La pantalla se queda completamente en blanco al exportar reportes.",NEGATIVE,product_reliability,False,Fallback local instantáneo sin error 500
+OUT_017,HTTP_503_SERVICE_UNAVAILABLE,Enterprise,"Nos vemos forzados a buscar una alternativa en el mercado por las caídas.",NEGATIVE,product_reliability,True,Conmutación a local L1/L2 en < 2ms
+OUT_018,HTTP_429_RATE_LIMIT,Standard,"Muchas gracias por la rápida atención, quedé muy satisfecho.",POSITIVE,none,False,Fallback activo con metadatos de contingencia
+OUT_019,MALFORMED_JSON_CORRUPTION,Enterprise,"La base de datos bloquea todas las tablas con cada consulta analítica.",NEGATIVE,product_reliability,False,Recuperación determinista con motor local
+OUT_020,NETWORK_SOCKET_DISCONNECT,Enterprise,"Por favor envíen los pasos para revocar el contrato firmado el mes pasado.",NEGATIVE,billing_pricing,True,Procesamiento local 100% garantizado
+OUT_021,CLOUD_TIMEOUT_2500MS,Standard,"Soy Maria con Cédula 52998877, solo quería confirmar el cambio de dirección.",NEUTRAL,security_privacy,False,Fallback local instantáneo sin error 500
+OUT_022,HTTP_503_SERVICE_UNAVAILABLE,Enterprise,"Hermoso servicio... borraron los permisos de todo el equipo y no dan respuesta.",NEGATIVE,product_reliability,False,Conmutación a local L1/L2 en < 2ms
+OUT_023,HTTP_429_RATE_LIMIT,Enterprise,"Construiremos un módulo interno para reemplazar este software inestable.",NEGATIVE,product_reliability,True,Fallback activo con metadatos de contingencia
+OUT_024,MALFORMED_JSON_CORRUPTION,Standard,"El sistema sigue facturando a pesar de haber tramitado la baja.",NEGATIVE,billing_pricing,True,Recuperación determinista con motor local
+OUT_025,NETWORK_SOCKET_DISCONNECT,Enterprise,"Expusieron credenciales de producción en los logs públicos, es inaceptable.",NEGATIVE,security_privacy,False,Procesamiento local 100% garantizado
+OUT_026,CLOUD_TIMEOUT_2500MS,Enterprise,"El mes que viene nos pasamos a la competencia sin falta por el cobro triple.",NEGATIVE,billing_pricing,True,Fallback local instantáneo sin error 500
+OUT_027,HTTP_503_SERVICE_UNAVAILABLE,Standard,"Nadie contesta en el chat y el teléfono siempre da tono de ocupado.",NEGATIVE,customer_support,False,Conmutación a local L1/L2 en < 2ms
+OUT_028,HTTP_429_RATE_LIMIT,Enterprise,"Solicitamos la devolución del saldo a favor; migramos a infraestructura propia.",NEGATIVE,billing_pricing,True,Fallback activo con metadatos de contingencia
+OUT_029,MALFORMED_JSON_CORRUPTION,Standard,"Felicitaciones al equipo de desarrollo, la actualización quedó genial.",POSITIVE,none,False,Recuperación determinista con motor local
+OUT_030,NETWORK_SOCKET_DISCONNECT,Enterprise,"El nivel de servicio no cumple los acuerdos de SLA, daremos de baja la cuenta.",NEGATIVE,customer_support,True,Procesamiento local 100% garantizado
